@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import Home from '../Home';
+import Nav from '../Nav';
 
 class App extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class App extends React.Component {
       <Router>
         <Switch>
           <Route path={ROUTES.HOME}>
+						<Nav />
             <Home />
           </Route>
         </Switch>
