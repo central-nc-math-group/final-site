@@ -1,33 +1,22 @@
-import { FullscreenExit } from "@material-ui/icons";
-
 export default function styles() {
-    // return {
-    //   app: {
-    //     textAlign: "center"
-    //   },
-    //   appHeader: {
-    //     backgroundColor: "#202020",
-    //     minHeight: "10vh",
-    //     display: "flex",
-    //     flexDirection: "column",
-    //     alignItems: "center",
-    //     justifyContent: "center",
-    //     fontSize: "calc(10px + 2vmin)",
-    //     color: "white"
-    //   },
-    // };
     return {
         nav: {
             display: "flex", 
-            fontSize: "calc(10px*2vmin)",
+            fontSize: "calc(2px*2vw)",
             color: "white", 
         },
         bar: {
             backgroundColor: "#000000",
         },
-        navBtn: {
-            display: "flex",
-            float: "right",
+        btn: {
+            background: '#000000',
+            border: 0,
+            borderRadius: 1,
+            color: 'white',
+            height: 'calc(30*vh)',
+            padding: '0 30px*vmin',
+            marginLeft: '1vw', 
+            marginRight: '1vw'
         },
     };
 }

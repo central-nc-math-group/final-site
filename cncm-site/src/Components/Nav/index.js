@@ -4,7 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core';
- import HomeLogo from '../../cncm-logo.png';
+ import HomeLogo from '../../images/cncm-logo.png';
 import Button from '@material-ui/core/Button';
 import { Link as RouterLink  } from 'react-router-dom';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
@@ -23,25 +23,23 @@ class NavBar extends React.Component {
             <AppBar position="static" className={classes.bar}>
                         <Toolbar>
                             <IconButton edge="start" color="inherit" aria-label="menu">
-                            <img src={HomeLogo} height={25} width={25} />
+                            <img src={HomeLogo} height={25} width={22.5} />
                             </IconButton>
                             
-
                             <Typography variant="h5" style={{"flexGrow": "1"}}>
                                 Cyclic National Competitive Math Group
                             </Typography>
 
-                            <div className={classes.navBtn}>
+                            <div>
+                                <Button className={classes.btn} component={RouterLink}>Home</Button>
 
-                                <Button color="inherit" component={RouterLink}>Home</Button>
+                                <Button className={classes.btn} component={RouterLink}>Join Us!</Button>
 
-                                <Button color="inherit" component={RouterLink}>Join Us!</Button>
+                                <Button className={classes.btn} component={RouterLink}>Our Team</Button>
 
-                                <Button color="inherit" component={RouterLink}>Our Team</Button>
-
-                                <Button color="inherit" component={RouterLink}>Problem of the Day</Button>
+                                <Button className={classes.btn} component={RouterLink}>Problem of the Day</Button>
                                
-                                <Button color="inherit" component={RouterLink}>Lectures</Button>
+                                <Button className={classes.btn} component={RouterLink}>Lectures</Button>
                             </div>   
                         </Toolbar>
                     </AppBar>	

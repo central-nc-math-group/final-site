@@ -2,10 +2,10 @@ export default function styles() {
   return {
     app: {
       textAlign: "center", 
-      backgroundColor: "#202020"
+      backgroundColor: "#FFFFFF"
     },
     appHeader: {
-      backgroundColor: "#101010",
+      background: "linear-gradient(to right, #007CCC, #000000)",
       minHeight: "10vh",
       display: "flex",
       flexDirection: "column",
