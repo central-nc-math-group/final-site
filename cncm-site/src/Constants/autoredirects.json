@@ -1,0 +1,17 @@
+{
+  "discord": {
+    "name": "Discord",
+    "redirect": "/discord",
+    "link": "https://discord.com/invite/ewQeEMU"
+  },
+  "youtube": {
+    "name": "Youtube",
+    "redirect": "/youtube",
+    "link": "https://www.youtube.com/c/CNCMath"
+  },
+  "twitch": {
+    "name": "twitch",
+    "redirect": "/twitch",
+    "link": "https://www.twitch.tv/cncmath"
+  }
+}
