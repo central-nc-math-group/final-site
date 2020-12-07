@@ -16,7 +16,7 @@ export default function styles() {
     },
     body: {
       fontSize: "calc(5px + 2vmin)", 
-      color: "white", 
+      color: "black", 
       textAlign: "left", 
       marginLeft: "10vw", 
       marginRight: "10vw", 

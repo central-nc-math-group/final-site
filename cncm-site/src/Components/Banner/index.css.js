@@ -1,9 +1,10 @@
 export default function styles(theme) {
   return {
     bannerContainer: {
-      backgroundColor: "#ffcc00",
+      background: "#000000",
       padding: "1em 2em",
-      fontSize: "1.5rem"
+      fontSize: "1.5rem", 
+      color: "white"
     },
     notification: {
       fontSize: "1.5rem",
