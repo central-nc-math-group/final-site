@@ -14,6 +14,8 @@ import { Link as RouterLink } from "react-router-dom";
 
 import styles from "./index.css.js";
 
+import * as ROUTES from "../../Constants/routes.js";
+
 class NavBar extends React.Component {
   render() {
     const { classes } = this.props;
@@ -31,23 +33,23 @@ class NavBar extends React.Component {
             </Typography>
 
             <div>
-              <Button className={classes.btn} component={RouterLink}>
+              <Button className={classes.btn} component={RouterLink} to={ROUTES.HOME}>
                 Home
               </Button>
 
-              <Button className={classes.btn} component={RouterLink}>
+              <Button className={classes.btn} component={RouterLink} to={ROUTES.CONTACT_US}>
                 Join Us!
               </Button>
 
-              <Button className={classes.btn} component={RouterLink}>
+              <Button className={classes.btn} component={RouterLink} to={ROUTES.OUR_TEAM}>
                 Our Team
               </Button>
 
-              <Button className={classes.btn} component={RouterLink}>
+              <Button className={classes.btn} component={RouterLink} to={ROUTES.PROBLEM_OF_THE_DAY}>
                 Problem of the Day
               </Button>
 
-              <Button className={classes.btn} component={RouterLink}>
+              <Button className={classes.btn} component={RouterLink} to={ROUTES.LECTURES}>
                 Lectures
               </Button>
             </div>

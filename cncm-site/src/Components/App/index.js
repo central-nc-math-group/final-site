@@ -4,6 +4,9 @@ import * as ROUTES from "../../Constants/routes.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "../Home";
+import AboutUs from "../AboutUs";
+import PoTD from "../PoTD";
+
 import Nav from "../Nav";
 import Banner from "../Banner";
 import Redirect from "../Redirect";
@@ -12,6 +15,7 @@ import Footer from "../Footer";
 import REDIRECTS from "../../Constants/autoredirects.json";
 
 import Dexie from "dexie";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -94,6 +98,15 @@ class App extends React.Component {
           <Route exact path={ROUTES.HOME}>
             <Home />
           </Route>
+          
+          <Route exact path={ROUTES.ABOUT_US}>
+            <AboutUs />
+          </Route>
+          
+          <Route exact path={ROUTES.PROBLEM_OF_THE_DAY}>
+            <PoTD />
+          </Route>
+          
           <Route
             path="/pranav"
             component={() => {
@@ -109,7 +122,9 @@ class App extends React.Component {
             />
           ))}
         </Switch>
-        <Footer />
+        <div style={{flex: 1, justifyContent: 'flex-end'}}>
+          <Footer />
+        </div>
       </Router>
     );
   }
