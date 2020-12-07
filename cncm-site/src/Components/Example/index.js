@@ -6,11 +6,9 @@
 // These first few lines do all of the imports. Do not delete any of these.
 import React from 'react';
 
-import previousStyles from './index.css.js';
+import styles from './index.css.js';
 
 import { withStyles } from '@material-ui/core';
-
-const styles = previousStyles();
 
 class Example extends React.Component {
   render() {

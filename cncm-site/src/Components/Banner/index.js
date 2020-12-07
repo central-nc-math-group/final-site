@@ -1,6 +1,6 @@
 import React from "react";
 
-import previousStyles from "./index.css.js";
+import styles from "./index.css.js";
 
 import {
   withStyles,
@@ -11,8 +11,6 @@ import {
   Grow
 } from "@material-ui/core";
 import { FiX, FiAlertCircle } from "react-icons/fi";
-
-const styles = previousStyles();
 
 class Banner extends React.Component {
   constructor(props) {

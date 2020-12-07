@@ -12,9 +12,7 @@ import {
 import HomeLogo from "../../Constants/images/cncm-logo.png";
 import { Link as RouterLink } from "react-router-dom";
 
-import previousStyles from "./index.css.js";
-
-const styles = previousStyles();
+import styles from "./index.css.js";
 
 class NavBar extends React.Component {
   render() {

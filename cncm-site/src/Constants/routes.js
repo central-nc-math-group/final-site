@@ -4,3 +4,10 @@
  */
 
 export const HOME = '/';
+
+export const LECTURES = '/lectures';
+export const PROBLEM_OF_THE_DAY = '/problem-of-the-day';
+
+export const ABOUT_US = '/about-us';
+export const CONTACT_US = '/contact-us';
+export const OUR_TEAM = '/our-team';

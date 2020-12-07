@@ -1,11 +1,9 @@
 import React from "react";
 
 import logo from "./../../logo.svg";
-import previousStyles from "./index.css.js";
+import styles from "./index.css.js";
 
 import { withStyles } from "@material-ui/core";
-
-const styles = previousStyles();
 
 class Home extends React.Component {
   render() {

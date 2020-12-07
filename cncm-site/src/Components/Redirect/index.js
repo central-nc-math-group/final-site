@@ -1,11 +1,8 @@
 import React from "react";
 
-import logo from "./../../logo.svg";
-import previousStyles from "./index.css.js";
+import styles from "./index.css.js";
 
 import { withStyles, Link } from "@material-ui/core";
-
-const styles = previousStyles();
 
 class Home extends React.Component {
   render() {
@@ -15,12 +12,12 @@ class Home extends React.Component {
 
     return (
       <div className={classes.app}>
-        <header className={classes.appHeader}>
+        <header className={classes.redirectHeader}>
           <h1> We're redirecting you to your final destination! </h1>
           <p>
             {" "}
             Hang tight - if you haven't been redirected, you can press{" "}
-            <Link href={link} className={classes.link} color="secondary">
+            <Link href={link} color="secondary">
               here
             </Link>{" "}
             to reach your destination!

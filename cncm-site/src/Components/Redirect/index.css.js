@@ -1,6 +1,6 @@
 export default function styles() {
   return {
-    appHeader: {
+    redirectHeader: {
       background: "linear-gradient(to right, #007CCC, #000000)",
       minHeight: "10vh",
       display: "flex",
