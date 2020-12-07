@@ -1,6 +1,7 @@
 import React from "react";
 
 import * as ROUTES from "../../Constants/routes.js";
+import REDIRECTS from "../../Constants/autoredirects.json";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "../Home";
@@ -12,10 +13,10 @@ import Banner from "../Banner";
 import Redirect from "../Redirect";
 import Footer from "../Footer";
 
-import REDIRECTS from "../../Constants/autoredirects.json";
 
 import Dexie from "dexie";
 
+import './index.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -83,49 +84,44 @@ class App extends React.Component {
     const { showBanner, loading, notification } = this.state;
 
     return (
-      <Router>
-        <Nav />
-        {!loading ? (
-          <Banner
-            hideBanner={this.hideBanner}
-            bannerDisplay={showBanner}
-            notification={notification}
-          />
-        ) : (
-          <></>
-        )}
-        <Switch>
-          <Route exact path={ROUTES.HOME}>
-            <Home />
-          </Route>
-          
-          <Route exact path={ROUTES.ABOUT_US}>
-            <AboutUs />
-          </Route>
-          
-          <Route exact path={ROUTES.PROBLEM_OF_THE_DAY}>
-            <PoTD />
-          </Route>
-          
-          <Route
-            path="/pranav"
-            component={() => {
-              window.location.href = "https://www.google.com";
-              return null;
-            }}
-          />
-          {Object.keys(REDIRECTS).map((key) => (
-            <Route
-              path={REDIRECTS[key].redirect}
-              key={`redirect-${REDIRECTS[key].name}`}
-              component={() => <Redirect link={REDIRECTS[key].link} />}
+      <div id="site">
+        <Router>
+          <Nav />
+          {!loading ? (
+            <Banner
+              hideBanner={this.hideBanner}
+              bannerDisplay={showBanner}
+              notification={notification}
             />
-          ))}
-        </Switch>
-        <div style={{flex: 1, justifyContent: 'flex-end'}}>
+          ) : (
+            <></>
+          )}
+          <div id="site-content">
+            <Switch>
+              <Route exact path={ROUTES.HOME}>
+                <Home />
+              </Route>
+
+              <Route exact path={ROUTES.ABOUT_US}>
+                <AboutUs />
+              </Route>
+
+              <Route exact path={ROUTES.PROBLEM_OF_THE_DAY}>
+                <PoTD />
+              </Route>
+
+              {Object.keys(REDIRECTS).map((key) => (
+                <Route
+                  path={REDIRECTS[key].redirect}
+                  key={`redirect-${REDIRECTS[key].name}`}
+                  component={() => <Redirect link={REDIRECTS[key].link} />}
+                />
+              ))}
+            </Switch>
+          </div>
           <Footer />
-        </div>
-      </Router>
+        </Router>
+      </div>
     );
   }
 }

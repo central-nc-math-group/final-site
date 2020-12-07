@@ -1,4 +1,4 @@
-export default function styles() {
+export default function styles(theme) {
   return {
     app: {
       textAlign: "center",
@@ -11,12 +11,12 @@ export default function styles() {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      fontSize: "calc(10px + 2vmin)",
-      color: "white"
+      fontSize: '1.5rem',
+      color: theme.palette.background.default
     },
     body: {
-      fontSize: "calc(5px + 2vmin)",
-      color: "black",
+      fontSize: '1.5rem',
+      color: theme.palette.text.primary,
       textAlign: "left",
       marginLeft: "10vw",
       marginRight: "10vw",

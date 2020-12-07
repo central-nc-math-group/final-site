@@ -1,18 +1,18 @@
 export default function styles(theme) {
   return {
     bannerContainer: {
-      background: "#000000",
-      padding: "1em 2em",
+      background: theme.palette.text.primary,
+      padding: theme.spacing(1, 2),
       fontSize: "1.5rem",
-      color: "white"
+      color: theme.palette.background.default
     },
     notification: {
       fontSize: "1.5rem",
       fontFamily: "Computer Modern",
-      padding: "12px"
+      padding: theme.spacing(1.5)
     },
     icon: {
-      color: "white"
+      color: theme.palette.background.default
     }
   };
 }

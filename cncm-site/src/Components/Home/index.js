@@ -5,16 +5,17 @@ import styles from "./index.css.js";
 
 import { withStyles } from "@material-ui/core";
 
+import FancyHeader from '../FancyHeader';
+
 class Home extends React.Component {
   render() {
     const { classes } = this.props;
 
     return (
       <div className={classes.app}>
-        <header className={classes.appHeader}>
-          <h1> Welcome to CNCM! </h1>
-          <p> Here you will find a lot of spam LAWL </p>
-        </header>
+        <FancyHeader heading="Welcome to CNCM!">
+          Here you will find a lot of spam LAWL
+        </FancyHeader>
         <body className={classes.body}>
           <p>
             At CNCM, we condone things such as spamming and other things that

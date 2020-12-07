@@ -1,4 +1,4 @@
-export default function styles() {
+export default function styles(theme) {
   return {
     redirectHeader: {
       background: "linear-gradient(to right, #007CCC, #000000)",
@@ -7,12 +7,18 @@ export default function styles() {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      fontSize: "calc(10px + 2vmin)",
-      color: "white"
+      fontSize: '1.5rem',
+      color: theme.palette.background.default
     },
     app: {
       textAlign: "center",
       backgroundColor: "#FFFFFF"
+    },
+    icon: {
+      verticalAlign: "bottom"
+    },
+    link: {
+      color: theme.palette.warning.light
     }
   };
 }
