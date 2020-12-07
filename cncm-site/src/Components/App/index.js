@@ -7,8 +7,9 @@ import Home from "../Home";
 import Nav from "../Nav";
 import Banner from "../Banner";
 import Redirect from "../Redirect";
+import Footer from "../Footer";
 
-import autoredirects from "../../Constants/autoredirects.json";
+import REDIRECTS from "../../Constants/autoredirects.json";
 
 import Dexie from "dexie";
 
@@ -100,14 +101,15 @@ class App extends React.Component {
               return null;
             }}
           />
-          {Object.keys(autoredirects).map((key) => (
+          {Object.keys(REDIRECTS).map((key) => (
             <Route
-              path={autoredirects[key].redirect}
-              key={`redirect-${autoredirects[key].name}`}
-              component={() => <Redirect link={autoredirects[key].link} />}
+              path={REDIRECTS[key].redirect}
+              key={`redirect-${REDIRECTS[key].name}`}
+              component={() => <Redirect link={REDIRECTS[key].link} />}
             />
           ))}
         </Switch>
+        <Footer />
       </Router>
     );
   }

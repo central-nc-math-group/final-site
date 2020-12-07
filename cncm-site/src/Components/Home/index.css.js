@@ -1,7 +1,7 @@
 export default function styles() {
   return {
     app: {
-      textAlign: "center", 
+      textAlign: "center",
       backgroundColor: "#FFFFFF"
     },
     appHeader: {
@@ -15,12 +15,12 @@ export default function styles() {
       color: "white"
     },
     body: {
-      fontSize: "calc(5px + 2vmin)", 
-      color: "black", 
-      textAlign: "left", 
-      marginLeft: "10vw", 
-      marginRight: "10vw", 
-      marginTop: "2.5vh",
+      fontSize: "calc(5px + 2vmin)",
+      color: "black",
+      textAlign: "left",
+      marginLeft: "10vw",
+      marginRight: "10vw",
+      marginTop: "2.5vh"
     }
   };
 }

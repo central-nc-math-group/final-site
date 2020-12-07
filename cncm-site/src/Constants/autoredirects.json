@@ -5,12 +5,12 @@
     "link": "https://discord.com/invite/ewQeEMU"
   },
   "youtube": {
-    "name": "Youtube",
+    "name": "YouTube",
     "redirect": "/youtube",
     "link": "https://www.youtube.com/c/CNCMath"
   },
   "twitch": {
-    "name": "twitch",
+    "name": "Twitch",
     "redirect": "/twitch",
     "link": "https://www.twitch.tv/cncmath"
   }
