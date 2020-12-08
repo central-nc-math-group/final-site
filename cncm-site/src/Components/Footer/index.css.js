@@ -37,6 +37,7 @@ export default function styles(theme) {
     },
     version: {
       marginTop: theme.spacing(3),
+      alignItems: 'center'
     },
   };
 }

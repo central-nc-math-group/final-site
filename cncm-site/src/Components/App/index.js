@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "../Home";
 import AboutUs from "../AboutUs";
 import PoTD from "../PoTD";
+import OurTeam from "../OurTeam";
 
 import Nav from "../Nav";
 import Banner from "../Banner";
@@ -108,6 +109,10 @@ class App extends React.Component {
 
               <Route exact path={ROUTES.PROBLEM_OF_THE_DAY}>
                 <PoTD />
+              </Route>
+
+              <Route exact path={ROUTES.OUR_TEAM}>
+                <OurTeam />
               </Route>
 
               {Object.keys(REDIRECTS).map((key) => (
