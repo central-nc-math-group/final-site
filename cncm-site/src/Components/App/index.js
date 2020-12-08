@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "../Home";
 import AboutUs from "../AboutUs";
 import PoTD from "../PoTD";
-
+import ContactUs from "../ContactUs";
 import Nav from "../Nav";
 import Banner from "../Banner";
 import Redirect from "../Redirect";
@@ -104,6 +104,10 @@ class App extends React.Component {
 
               <Route exact path={ROUTES.ABOUT_US}>
                 <AboutUs />
+              </Route>
+
+              <Route exact path={ROUTES.CONTACT_US}>
+                <ContactUs />
               </Route>
 
               <Route exact path={ROUTES.PROBLEM_OF_THE_DAY}>
