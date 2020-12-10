@@ -21,6 +21,9 @@ export default function styles(theme) {
       marginLeft: "10vw",
       marginRight: "10vw",
       marginTop: "2.5vh"
-    }
+    },
+    cardTitle: {
+      fontSize: '1.5rem'
+    },
   };
 }
