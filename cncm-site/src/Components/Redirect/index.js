@@ -12,7 +12,7 @@ class Redirect extends React.Component {
   render() {
     const { classes, link } = this.props;
 
-    //window.location.href = link;
+    window.location.href = link;
 
     return (
       <div className={classes.app}>

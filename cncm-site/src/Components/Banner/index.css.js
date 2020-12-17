@@ -8,7 +8,6 @@ export default function styles(theme) {
     },
     notification: {
       fontSize: "1.5rem",
-      fontFamily: "Computer Modern",
       padding: theme.spacing(1.5)
     },
     icon: {

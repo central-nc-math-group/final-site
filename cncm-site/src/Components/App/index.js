@@ -15,19 +15,29 @@ import Banner from "../Banner";
 import Redirect from "../Redirect";
 import Footer from "../Footer";
 
+import { Link } from "@material-ui/core";
 
 import Dexie from "dexie";
 
-import './index.css';
+import "./index.css";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       showBanner: true,
-      notification: "No Notification",
+      notification: (
+        <>
+          Signup for CNCM Online R4! Contest takes place 2:00 - 3:00 PM EST
+          12/26! More info{" "}
+          <Link color="secondary" href="https://online.cncmath.org">
+            here
+          </Link>
+          .
+        </>
+      ),
       existsNotification: true,
-      loading: false
+      loading: false,
     };
 
     this.hideBanner = this.hideBanner.bind(this);
@@ -50,11 +60,11 @@ class App extends React.Component {
         if (!notification) {
           await db.banner.add({
             id: "notification",
-            value: this.state.notification
+            value: this.state.notification,
           });
           await db.banner.add({
             id: "showBanner",
-            value: this.state.showBanner ? "1" : "0"
+            value: this.state.showBanner ? "1" : "0",
           });
           return;
         }

@@ -2,7 +2,7 @@ export default function styles(theme) {
   return {
     app: {
       textAlign: "center",
-      backgroundColor: "#FFFFFF"
+      backgroundColor: "#FFFFFF",
     },
     appHeader: {
       background: "linear-gradient(to right, #007CCC, #000000)",
@@ -11,19 +11,24 @@ export default function styles(theme) {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      fontSize: '1.5rem',
-      color: theme.palette.background.default
+      fontSize: "1.5rem",
+      color: theme.palette.background.default,
     },
     body: {
-      fontSize: '1.5rem',
+      fontSize: "1.5rem",
       color: theme.palette.text.primary,
       textAlign: "left",
       marginLeft: "10vw",
       marginRight: "10vw",
-      marginTop: "2.5vh"
+      marginTop: "2.5vh",
     },
     cardTitle: {
-      fontSize: '1.5rem'
+      fontSize: "1.5rem",
+    },
+    joinUsCard: {
+      textAlign: "center",
+      color: "white",
+      cursor: "pointer"
     },
   };
 }

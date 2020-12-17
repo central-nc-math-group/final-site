@@ -8,7 +8,8 @@ import {
   Typography,
   Tooltip,
   IconButton,
-  Grow
+  Grow,
+  Link
 } from "@material-ui/core";
 import { FiX, FiAlertCircle } from "react-icons/fi";
 

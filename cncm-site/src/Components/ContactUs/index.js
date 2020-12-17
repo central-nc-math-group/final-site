@@ -234,6 +234,7 @@ class ContactUs extends React.Component {
           helperText={messageError && messageHelper}
           onBlur={this.checkEvent}
         />
+        <br />
         {sent ? (
           <Button variant="contained" color="secondary" endIcon={<FiCheck />}>
             Sent

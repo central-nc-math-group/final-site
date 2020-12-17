@@ -3,62 +3,109 @@ import React from "react";
 import logo from "./../../logo.svg";
 import styles from "./index.css.js";
 
-import { Typography, withStyles } from "@material-ui/core";
+import {
+  Typography,
+  withStyles,
+  Card,
+  CardContent,
+  Grid,
+  CardMedia,
+  Button,
+  Fade,
+  CardHeader,
+  Link,
+  Paper,
+} from "@material-ui/core";
+import { RiDiscordFill, RiYoutubeFill } from "react-icons/ri";
+import TabBar from "./tabbar";
 
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Grid from '@material-ui/core/Grid';
+import { Link as RouterLink, withRouter } from "react-router-dom";
 
-import InfoCard from '../InfoCard';
-import FancyHeader from '../FancyHeader';
+import { compose } from "recompose";
+
+import REDIRECTS from "../../Constants/autoredirects.json";
+
+import InfoCard from "../InfoCard";
+import FancyHeader from "../FancyHeader";
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      expanded: {
+        community: false,
+        contests: false,
+        preparation: false,
+      },
+    };
+
+    this.routeTo = this.routeTo.bind(this);
+  }
+
+  routeTo(location) {
+    window.location.href = location;
+  }
+
   render() {
     const { classes } = this.props;
+    const { expanded } = this.state;
 
     return (
       <div className={classes.app}>
         <FancyHeader heading="Welcome to CNCM!">
           Here you will find a lot of spam LAWL
         </FancyHeader>
-        <body className={classes.body}>
-          <p>
-            At CNCM, we condone things such as spamming and other things that
-            are usually considered bad and bannable offenses in other servers,
-            which is why we are superior. This is why people choose CNCM when
-            they want to spam!
-          </p>
-          
+        <div className={classes.body}>
+          <Paper elevation={10} style={{ padding: "2em" }}>
+            <p style={{ marginTop: 0 }}>
+              The Cyclic National Competitive Math Group (CNCM) is a non-profit,
+              501(c)3 tax-exempt organization dedicated to enriching both the
+              academic and competitive math knowledge of middle school, high
+              school, and college students through online lectures, original
+              math problems, and a multitude of contests.
+            </p>
+            <Paper style={{ padding: "1rem" }} elevation={4}>
+              <TabBar />
+            </Paper>
+            <p>
+              I AM AKSHAR AND IF YOU JOIN MY DISCORD SERVER GET BANNED HAHA.
+            </p>
             <Grid container spacing={3}>
               <Grid item xs>
-              <InfoCard isBtn={true} btnText="Click me again!" title="Community" body="At CNCM, we pride ourselves in the large and active community that we have
-                    built through discord filled with people who are passionate about 
-                    competitive math and math in general!" />
+                <Card
+                  style={{ backgroundColor: "#7289da" }}
+                  className={classes.joinUsCard}
+                  onClick={(_) => this.routeTo(REDIRECTS.discord.link)}
+                >
+                  <CardMedia>
+                    <RiDiscordFill size="50%" color="#FFFFFF" />
+                  </CardMedia>
+                  <CardContent>
+                    <Typography variant="h3">DISCORD</Typography>
+                  </CardContent>
+                </Card>
               </Grid>
-
               <Grid item xs>
-              <InfoCard isBtn={true} btnText="Click me again!" title="Community" body="At CNCM, we pride ourselves in the large and active community that we have
-                    built through discord filled with people who are passionate about 
-                    competitive math and math in general!" />
-              </Grid>
-
-              <Grid item xs>
-              <InfoCard isBtn={true} btnText="Click me again!" title="Community" body="At CNCM, we pride ourselves in the large and active community that we have
-                    built through discord filled with people who are passionate about 
-                    competitive math and math in general!" />
+                <Card
+                  style={{ backgroundColor: "#FF0000" }}
+                  className={classes.joinUsCard}
+                  onClick={(_) => this.routeTo(REDIRECTS.youtube.link)}
+                >
+                  <CardMedia>
+                    <RiYoutubeFill size="50%" color="#FFFFFF" />
+                  </CardMedia>
+                  <CardContent>
+                    <Typography variant="h3">YOUTUBE</Typography>
+                  </CardContent>
+                </Card>
               </Grid>
             </Grid>
-
-            <p>
-              At CNCM, we have many things to do, whether that be the PoTD competition, some more spam, 
-              and some especially good spam such as the CNCM Online rounds. If you are reading this paragraph, 
-              then you are clearly spam, by the spam theorem. I would like to render latex on this page. 
-              By the spam theorem, we can clearly define that you are spam. Spammity spammity spam. 
-            </p>
-        </body>
+          </Paper>
+        </div>
       </div>
     );
   }
 }
 
-export default withStyles(styles)(Home);
+export default compose(withRouter, withStyles(styles))(Home);

@@ -11,7 +11,7 @@ export default function styles(theme) {
       width: '40%'
     },
     textArea: {
-      width: `calc(80% + ${theme.spacing(1)}px)`
+      width: `calc(80% + ${theme.spacing(2)}px)`
     }
   };
 }
