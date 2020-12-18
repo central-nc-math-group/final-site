@@ -45,11 +45,21 @@ function a11yProps(index) {
   };
 }
 
+const tabHeight = '36px';
+const panelHeight = '200px';
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
     width: "100%",
   },
+  tabsRoot: {
+    minHeight: tabHeight,
+    height: tabHeight,
+  },
+  tabRoot: {
+    minHeight: tabHeight,
+    height: tabHeight,
+  }
 }));
 
 export default function FullWidthTabs() {
@@ -75,10 +85,31 @@ export default function FullWidthTabs() {
           textColor="primary"
           variant="fullWidth"
           aria-label="cncm info"
+          classes={{
+            root: classes.tabsRoot,
+          }}
         >
-          <Tab label="Community" {...a11yProps(0)} />
-          <Tab label="Content" {...a11yProps(1)} />
-          <Tab label="Preparation" {...a11yProps(2)} />
+          <Tab
+            label="Community"
+            {...a11yProps(0)}
+            classes={{
+              root: classes.tabRoot,
+            }}
+          />
+          <Tab
+            label="Content"
+            {...a11yProps(1)}
+            classes={{
+              root: classes.tabRoot,
+            }}
+          />
+          <Tab
+            label="Preparation"
+            {...a11yProps(2)}
+            classes={{
+              root: classes.tabRoot,
+            }}
+          />
         </Tabs>
       </AppBar>
       <SwipeableViews
