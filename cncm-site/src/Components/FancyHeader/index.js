@@ -8,10 +8,12 @@ class FancyHeader extends React.Component {
     const { classes, heading, children } = this.props;
 
     return (
-      <header className={classes.header}>
+			<header className={classes.header}>
+				<br />
         <Typography variant="h3">{heading}</Typography>
         <br />
-        <Typography variant="h5">{children}</Typography>
+				<Typography variant="h5">{children}</Typography>
+				<br />
       </header>
     );
   }

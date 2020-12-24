@@ -68,8 +68,8 @@ class Home extends React.Component {
             <Paper style={{ padding: "1rem" }} elevation={4}>
               <TabBar />
             </Paper>
-            <p>
-              I AM AKSHAR AND IF YOU JOIN MY DISCORD SERVER GET BANNED HAHA.
+						<p>
+							If you would like to check out our discord or youtube, then click the tiles below!
             </p>
             <Grid container spacing={3}>
               <Grid item xs>

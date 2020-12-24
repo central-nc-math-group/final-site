@@ -86,7 +86,7 @@ class NavBar extends React.Component {
                 component={RouterLink}
                 to={ROUTES.HOME}
               >
-                Home
+									Home
               </Button>
 
               <Button
@@ -158,7 +158,7 @@ class NavBar extends React.Component {
               </Button>
             </div>
           </Toolbar>
-        </AppBar>
+						</AppBar>
       </div>
     );
   }

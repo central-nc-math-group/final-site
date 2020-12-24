@@ -20,7 +20,7 @@ class BioCard extends React.Component {
                 <Card style={{maxWidth: 345}}>
                     <CardActionArea>
                         <CardMedia
-                        style={{            height: 140,
+                        style={{            height: 80,
                         }}
                         image={img}
                         title="Someones face lalwlawlawlawl"
