@@ -54,7 +54,7 @@ class Home extends React.Component {
     return (
       <div className={classes.app}>
         <FancyHeader heading="Welcome to CNCM!">
-          Here you will find a lot of spam LAWL
+					Cyclic National Competitive Math Group
         </FancyHeader>
         <div className={classes.body}>
           <Paper elevation={10} style={{ padding: "2em" }}>

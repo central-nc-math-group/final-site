@@ -8,6 +8,8 @@ import Home from "../Home";
 import AboutUs from "../AboutUs";
 import PoTD from "../PoTD";
 
+import Lectures from "../Lectures";
+
 import OurTeam from "../OurTeam";
 import ContactUs from "../ContactUs";
 import Nav from "../Nav";
@@ -129,6 +131,10 @@ class App extends React.Component {
               <Route exact path={ROUTES.OUR_TEAM}>
                 <OurTeam />
               </Route>
+
+							<Route exact path={ROUTES.LECTURES}>
+								<Lectures />
+							</Route>
 
               {Object.keys(REDIRECTS).map((key) => (
                 <Route

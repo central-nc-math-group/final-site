@@ -6,6 +6,8 @@ import { withStyles, TextField, Button } from "@material-ui/core";
 
 import { FiSend, FiCheck } from "react-icons/fi";
 
+import FancyHeader from "../FancyHeader";
+
 class ContactUs extends React.Component {
   constructor(props) {
     super(props);
@@ -199,58 +201,62 @@ class ContactUs extends React.Component {
     let disabled = this.checkAll();
 
     return (
-      <form className={classes.root} autocomplete="off">
-        <TextField
-          className={classes.textField}
-          name="name"
-          label="Name"
-          variant="outlined"
-          value={name.value}
-          onChange={this.setValue}
-          error={nameError}
-          helperText={nameError && nameHelper}
-          onBlur={this.checkEvent}
-        />
-        <TextField
-          className={classes.textField}
-          name="email"
-          label="Email"
-          variant="outlined"
-          value={email.value}
-          onChange={this.setValue}
-          error={emailError}
-          helperText={emailError && emailHelper}
-          onBlur={this.checkEvent}
-        />
-        <TextField
-          className={classes.textArea}
-          name="message"
-          label="Message"
-          variant="outlined"
-          multiline={true}
-          value={message.value}
-          onChange={this.setValue}
-          error={messageError}
-          helperText={messageError && messageHelper}
-          onBlur={this.checkEvent}
-        />
-        <br />
-        {sent ? (
-          <Button variant="contained" color="secondary" endIcon={<FiCheck />}>
-            Sent
-          </Button>
-        ) : (
-          <Button
-            variant="contained"
-            color="primary"
-            endIcon={<FiSend />}
-            disabled={disabled}
-            onClick={this.onSubmit}
-          >
-            Send
-          </Button>
-        )}
-      </form>
+			<div>
+			<FancyHeader heading="Contact Us" children="Contact us using the form below." />
+					<form className={classes.root} autocomplete="off">
+						<TextField
+						className={classes.textField}
+						name="name"
+						label="Name"
+						variant="outlined"
+						value={name.value}
+						onChange={this.setValue}
+						error={nameError}
+						helperText={nameError && nameHelper}
+						onBlur={this.checkEvent}
+					/>
+					<TextField
+						className={classes.textField}
+						name="email"
+						label="Email"
+						variant="outlined"
+						value={email.value}
+						onChange={this.setValue}
+						error={emailError}
+						helperText={emailError && emailHelper}
+						onBlur={this.checkEvent}
+					/>
+					<TextField
+						className={classes.textArea}
+						name="message"
+						label="Message"
+						variant="outlined"
+						multiline={true}
+						value={message.value}
+						onChange={this.setValue}
+						error={messageError}
+						helperText={messageError && messageHelper}
+						onBlur={this.checkEvent}
+					/>
+					<br />
+					{sent ? (
+						<Button variant="contained" color="secondary" endIcon={<FiCheck />}>
+							Sent
+						</Button>
+					) : (
+						<Button
+							variant="contained"
+							color="primary"
+							endIcon={<FiSend />}
+							disabled={disabled}
+							onClick={this.onSubmit}
+						>
+							Send
+						</Button>
+					)}
+				</form>
+			</div>
+	
     );
   }
 }
