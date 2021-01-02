@@ -15,7 +15,11 @@ import {
 
 import { RiTwitchLine, RiDiscordLine, RiYoutubeLine } from "react-icons/ri";
 
+
 import HomeLogo from "../../Constants/images/cncm-logo.png";
+
+import NewHomeLogo from "../../Constants/images/new-icon.svg";
+
 import { Link as RouterLink, withRouter } from "react-router-dom";
 
 import { compose } from "recompose";
@@ -70,10 +74,10 @@ class NavBar extends React.Component {
 
     return (
       <div className={classes.nav}>
-        <AppBar position="static" className={classes.bar}>
+        <AppBar position="static" className={classes.bar} height={5/2}>
           <Toolbar>
             <IconButton edge="start" color="inherit" aria-label="menu">
-              <img src={HomeLogo} height={25} width={22.5} />
+              <img src={NewHomeLogo} width={65} height={65}/>
             </IconButton>
 
 						<Typography variant="h5" style={{ flexGrow: "1", color: '#000000'}}>

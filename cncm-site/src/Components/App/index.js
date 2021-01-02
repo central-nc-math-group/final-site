@@ -35,6 +35,7 @@ let theme = createMuiTheme({
 		}, 
 		secondary: {
 			main: '#e03a68',
+			light: '#d86c87',
 		},
 		error: {
 			main: '#f3ad5a',

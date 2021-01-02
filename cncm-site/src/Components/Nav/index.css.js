@@ -13,7 +13,7 @@ export default function styles(theme) {
       border: 0,
       borderRadius: 1,
       color: '#000000',
-      height: "calc(30*vh)",
+      height: "5vh",
       padding: "0 30px*vmin",
       marginLeft: "1vw",
       marginRight: "1vw"
