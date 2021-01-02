@@ -23,6 +23,36 @@ import Dexie from "dexie";
 
 import "./index.css";
 
+
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { responsiveFontSizes } from '@material-ui/core/styles';
+
+
+let theme = createMuiTheme({
+	palette: {
+		primary: {
+			main: '#e8705c',
+		}, 
+		secondary: {
+			main: '#e03a68',
+		},
+		error: {
+			main: '#f3ad5a',
+		}, 
+		warning: {
+			main: '#3d7eb3',
+		}, 
+		info: {
+			main: '#b03b7a',
+		}, 
+		success: {
+			main: '#ceddf1',
+		},
+	}
+});
+
+theme = responsiveFontSizes(theme);
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +62,7 @@ class App extends React.Component {
         <>
           Signup for CNCM Online R4! Contest takes place 2:00 - 3:00 PM EST
           12/26! More info{" "}
-          <Link color="secondary" href="https://online.cncmath.org">
+          <Link color="warning" href="https://online.cncmath.org">
             here
           </Link>
           .
@@ -99,6 +129,8 @@ class App extends React.Component {
 
     return (
       <div id="site">
+
+			<ThemeProvider theme={theme}>
         <Router>
           <Nav />
           {!loading ? (
@@ -111,42 +143,43 @@ class App extends React.Component {
             <></>
           )}
           <div id="site-content">
-            <Switch>
-              <Route exact path={ROUTES.HOME}>
-                <Home />
-              </Route>
+							<Switch>
+								<Route exact path={ROUTES.HOME}>
+									<Home />
+								</Route>
 
-              <Route exact path={ROUTES.ABOUT_US}>
-                <AboutUs />
-              </Route>
+								<Route exact path={ROUTES.ABOUT_US}>
+									<AboutUs />
+								</Route>
 
-              <Route exact path={ROUTES.CONTACT_US}>
-                <ContactUs />
-              </Route>
+								<Route exact path={ROUTES.CONTACT_US}>
+									<ContactUs />
+								</Route>
 
-              <Route exact path={ROUTES.PROBLEM_OF_THE_DAY}>
-                <PoTD />
-              </Route>
+								<Route exact path={ROUTES.PROBLEM_OF_THE_DAY}>
+									<PoTD />
+								</Route>
 
-              <Route exact path={ROUTES.OUR_TEAM}>
-                <OurTeam />
-              </Route>
+								<Route exact path={ROUTES.OUR_TEAM}>
+									<OurTeam />
+								</Route>
 
-							<Route exact path={ROUTES.LECTURES}>
-								<Lectures />
-							</Route>
+								<Route exact path={ROUTES.LECTURES}>
+									<Lectures />
+								</Route>
 
-              {Object.keys(REDIRECTS).map((key) => (
-                <Route
-                  path={REDIRECTS[key].redirect}
-                  key={`redirect-${REDIRECTS[key].name}`}
-                  component={() => <Redirect link={REDIRECTS[key].link} />}
-                />
-              ))}
-            </Switch>
+								{Object.keys(REDIRECTS).map((key) => (
+									<Route
+										path={REDIRECTS[key].redirect}
+										key={`redirect-${REDIRECTS[key].name}`}
+										component={() => <Redirect link={REDIRECTS[key].link} />}
+									/>
+								))}
+							</Switch>
           </div>
           <Footer />
         </Router>
+			</ThemeProvider>
       </div>
     );
   }

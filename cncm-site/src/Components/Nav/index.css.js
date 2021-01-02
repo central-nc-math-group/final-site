@@ -6,13 +6,13 @@ export default function styles(theme) {
       color: theme.palette.background.default
     },
     bar: {
-      backgroundColor: "#000000"
+      backgroundColor: '#FFFFFF',
     },
     btn: {
-      background: "#000000",
+      background: "#FFFFFF",
       border: 0,
       borderRadius: 1,
-      color: theme.palette.background.default,
+      color: '#000000',
       height: "calc(30*vh)",
       padding: "0 30px*vmin",
       marginLeft: "1vw",
@@ -46,7 +46,7 @@ export default function styles(theme) {
       }
     },
     icon: {
-      color: "white",
+      color: "#000000",
       minWidth: "30px"
     }
   };

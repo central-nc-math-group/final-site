@@ -1,7 +1,7 @@
 export default function styles(theme) {
   return {
     header: {
-      background: "linear-gradient(to right, #007CCC, #000000)",
+      background: theme.palette.info.main,
       minHeight: "10vh",
       display: "flex",
       flexDirection: "column",

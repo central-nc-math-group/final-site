@@ -76,8 +76,8 @@ class NavBar extends React.Component {
               <img src={HomeLogo} height={25} width={22.5} />
             </IconButton>
 
-            <Typography variant="h5" style={{ flexGrow: "1" }}>
-              Cyclic National Competitive Math Group
+						<Typography variant="h5" style={{ flexGrow: "1", color: '#000000'}}>
+							CNCM
             </Typography>
 
             <div>
