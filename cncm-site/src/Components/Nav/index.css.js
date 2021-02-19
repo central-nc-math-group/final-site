@@ -6,14 +6,14 @@ export default function styles(theme) {
       color: theme.palette.background.default,
     },
     bar: {
-      backgroundColor: "#000000!important",
+      backgroundColor: "#FFFFFF!important",
     },
     btn: {
-      background: "#000000!important",
+      background: "#FFFFFF!important",
       border: 0,
       borderRadius: 1,
-      color: theme.palette.background.default,
-      height: "calc(30*vh)",
+      color: "#000000",
+      height: "5vh",
       padding: "0 30px*vmin",
       marginLeft: "1vw",
       marginRight: "1vw",

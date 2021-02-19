@@ -1,7 +1,7 @@
 export default function styles(theme) {
   return {
     bannerContainer: {
-      background: theme.palette.text.primary,
+      background: theme.palette.secondary.main,
       padding: theme.spacing(1, 2),
       fontSize: "1.5rem",
       color: theme.palette.background.default

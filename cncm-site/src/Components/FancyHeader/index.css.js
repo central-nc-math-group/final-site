@@ -1,23 +1,40 @@
 export default function styles(theme) {
   return {
     header: {
-      background: "linear-gradient(to right, #007CCC, #000000)",
+      background: '#f8705c' ,
       minHeight: "10vh",
       display: "flex",
       flexDirection: "column",
-      alignItems: "center",
       justifyContent: "center",
       fontSize: '1.5rem',
       color: theme.palette.background.default,
-      padding: theme.spacing(5)
+      padding: theme.spacing(5), 
     },
-    body: {
-      fontSize: '1.5rem',
-      color: theme.palette.text.primary,
-      textAlign: "left",
-      marginLeft: "10vw",
-      marginRight: "10vw",
-      marginTop: "2.5vh"
-    }
+		textWrapper: {
+			alignItems: "center",
+			position: 'absolute',
+		}, 
+		wrapper: {
+			backgroundColor: theme.palette.secondary.light,
+			height: "20vh", 
+		}, 
+		content: {
+			textAlign: 'center', 
+			position: 'absolute', 
+			zIndex: 1, 
+			height: '20vh', 
+			width: '100%', 
+		}, 
+		pos: {
+			display: 'flex', 
+			justifyContent: 'center', 
+			alignItems: 'center',
+			width: '100%', 
+			height: '100%', 
+		}, 
+		text: {
+			margin: "auto", 
+			color: "#ffffff",
+		}
   };
 }
