@@ -72,7 +72,7 @@ class Home extends React.Component {
               If you would like to check out our Discord or YouTube, then click
               the tiles below!
             </p>
-            <Grid container spacing={3}>
+            <Grid container spacing={3} style={{ justifyContent: "center" }}>
               <Grid item xs className={classes.joinUsBorder}>
                 <Card
                   style={{ backgroundColor: "#7289da" }}
