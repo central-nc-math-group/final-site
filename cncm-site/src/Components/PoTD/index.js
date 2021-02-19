@@ -27,7 +27,7 @@ class PoTD extends React.Component {
   }
 
   async getTodayPoTD() {
-    const res = await fetch("http://potdlord.herokuapp.com/potd/current", {
+    const res = await fetch("https://potdlord.herokuapp.com/potd/current", {
       method: "POST",
     });
     if (res.status > 300) {
@@ -39,7 +39,7 @@ class PoTD extends React.Component {
   }
 
   async getPastPoTD(property) {
-    const res = await fetch("http://potdlord.herokuapp.com/potd/past", {
+    const res = await fetch("https://potdlord.herokuapp.com/potd/past", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

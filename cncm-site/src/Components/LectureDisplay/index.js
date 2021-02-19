@@ -252,7 +252,7 @@ class LectureDisplay extends React.Component {
   }
 
   async componentDidMount() {
-    const res = await fetch("http://potdlord.herokuapp.com/lecture/search", {
+    const res = await fetch("https://potdlord.herokuapp.com/lecture/search", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

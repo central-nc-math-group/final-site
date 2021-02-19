@@ -28,7 +28,7 @@ class LectureDisplay extends React.Component {
   }
 
   async componentDidMount() {
-    const res = await fetch("http://potdlord.herokuapp.com/lecture/list", {
+    const res = await fetch("https://potdlord.herokuapp.com/lecture/list", {
       method: "POST",
     });
     if (res.status > 300) {
