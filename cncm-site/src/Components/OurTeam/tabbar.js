@@ -10,7 +10,7 @@ import {
   Typography,
   Box,
   Link,
-   Grid
+  Grid,
 } from "@material-ui/core";
 
 import aksharFace from "../../Constants/images/cncm-logo.png";
@@ -69,7 +69,6 @@ export default function FullWidthTabs() {
     setValue(index);
   };
 
-
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
@@ -91,89 +90,92 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-            <Grid container spacing={3}>
-                <Grid item xs>
-									<BioCard  name="Akshar Yeccherla" description="President" />
-                </Grid>
-
-								<Grid item xs>
-									<BioCard name="Pranav Konda" description="Technical Captain" />
-                </Grid>
-
-                <Grid item xs>
-                    <BioCard name="Minseok Park" description="Content Creation Captain"/>
-                </Grid>
+          <Grid container spacing={3}>
+            <Grid item xs>
+              <BioCard name="Akshar Yeccherla" description="President" />
             </Grid>
 
-            <Grid container spacing={3}>
-                <Grid item xs>
-                    <BioCard name="Sushrit Pasumarthy" description="Outreach Captain"/>
-                </Grid>
-
-                <Grid item xs>
-                    <BioCard name="Harry Chen" description="Board Member"/>
-                </Grid>
-
-                <Grid item xs>
-                    <BioCard name="Noah Shienbaum" description="Finance Head"/>
-                </Grid>
+            <Grid item xs>
+              <BioCard name="Pranav Konda" description="Technical Captain" />
             </Grid>
 
-            <Grid container spacing={3}>
-                <Grid item xs>
-                    <BioCard name="Hari Desikan" description="Board Member"/>
-                </Grid>
-
-                <Grid item xs>
-                    <BioCard name="Srijan Oduru" description="Board Member"/>
-                </Grid>
-
-                <Grid item xs>
-                    <BioCard name="Aditya Gupta" description="Board Member"/>
-                </Grid>
+            <Grid item xs>
+              <BioCard
+                name="Minseok Park"
+                description="Content Creation Captain"
+              />
             </Grid>
-            
+          </Grid>
+
+          <Grid container spacing={3}>
+            <Grid item xs>
+              <BioCard
+                name="Sushrit Pasumarthy"
+                description="Outreach Captain"
+              />
+            </Grid>
+
+            <Grid item xs>
+              <BioCard name="Harry Chen" description="Board Member" />
+            </Grid>
+
+            <Grid item xs>
+              <BioCard name="Noah Shienbaum" description="Finance Head" />
+            </Grid>
+          </Grid>
+
+          <Grid container spacing={3}>
+            <Grid item xs>
+              <BioCard name="Hari Desikan" description="Board Member" />
+            </Grid>
+
+            <Grid item xs>
+              <BioCard name="Srijan Oduru" description="Board Member" />
+            </Grid>
+
+            <Grid item xs>
+              <BioCard name="Aditya Gupta" description="Board Member" />
+            </Grid>
+          </Grid>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-        <Grid container spacing={3}>
-								<Grid item xs>
-									<BioCard name="Kenan Hasanaliyev" description="Advisor" />
-                </Grid>
-
-                <Grid item xs>
-                    <BioCard name="Raymond Feng" description="Advisor"/>
-                </Grid>
-
-                <Grid item xs>
-                    <BioCard name="Albert Wang" description="Advisor"/>
-                </Grid>
+          <Grid container spacing={3}>
+            <Grid item xs>
+              <BioCard name="Kenan Hasanaliyev" description="Advisor" />
             </Grid>
-            <Grid container spacing={3}>
-                <Grid item xs>
-                    <BioCard name="Amol Rama" description="ORZ HIM RIGHT NOW"/>
-                </Grid>
 
-                <Grid item xs>
-                    <BioCard name="Brian Zhang" description="Advisor"/>
-                </Grid>
-
-                <Grid item xs>
-                    <BioCard name="Hanna Chen" description="Advisor"/>
-                </Grid>
+            <Grid item xs>
+              <BioCard name="Raymond Feng" description="Advisor" />
             </Grid>
-            <Grid container spacing={3}>
-                <Grid item xs>
-                    <BioCard name="Nathan Cho" description="Advisor"/>
-                </Grid>
+          </Grid>
 
-                <Grid item xs>
-                    <BioCard name="Neil Shah" description="Advisor"/>
-                </Grid>
-
-                <Grid item xs>
-                    <BioCard name="Delta Index" description="Official Alt"/>
-                </Grid>
+          <Grid container spacing={3}>
+            <Grid item xs>
+              <BioCard name="Albert Wang" description="Advisor" />
             </Grid>
+            <Grid item xs>
+              <BioCard name="Amol Rama" description="Advisor" />
+            </Grid>
+          </Grid>
+          <Grid container spacing={3}>
+            <Grid item xs>
+              <BioCard name="Brian Zhang" description="Advisor" />
+            </Grid>
+
+            <Grid item xs>
+              <BioCard name="Hanna Chen" description="Advisor" />
+            </Grid>
+          </Grid>
+
+          <Grid container spacing={3}>
+            <Grid item xs>
+              <BioCard name="Nathan Cho" description="Advisor" />
+            </Grid>
+
+            <Grid item xs>
+              <BioCard name="Neil Shah" description="Advisor" />
+            </Grid>
+          </Grid>
         </TabPanel>
       </SwipeableViews>
     </div>

@@ -1,6 +1,6 @@
 export default function styles(theme) {
-	return {
-		body: {
+  return {
+    body: {
       fontSize: "1.5rem",
       color: theme.palette.text.primary,
       textAlign: "left",
@@ -8,5 +8,5 @@ export default function styles(theme) {
       marginRight: "10vw",
       marginTop: "2.5vh",
     },
-	};
-};
+  };
+}

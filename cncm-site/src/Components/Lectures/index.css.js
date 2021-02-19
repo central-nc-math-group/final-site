@@ -1,8 +1,6 @@
 export default function styles(theme) {
   return {
-    app: {
-      textAlign: "center",
-      backgroundColor: "#FFFFFF",
+    body: {
       fontSize: "1.5rem",
       color: theme.palette.text.primary,
       textAlign: "left",

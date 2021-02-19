@@ -5,11 +5,10 @@ import styles from "./index.css.js";
 import {
   withStyles,
   Grid,
-  Typography,
   Tooltip,
   IconButton,
   Grow,
-  Link
+  Box,
 } from "@material-ui/core";
 import { FiX, FiAlertCircle } from "react-icons/fi";
 
@@ -20,7 +19,7 @@ class Banner extends React.Component {
     this.state = {
       showBanner: true,
       hideGrow: false,
-      bannerDisplay: true
+      bannerDisplay: true,
     };
 
     this.hideBanner = this.hideBanner.bind(this);
@@ -29,7 +28,7 @@ class Banner extends React.Component {
   componentDidMount() {
     this.setState({
       hideGrow: !this.props.bannerDisplay,
-      bannerDisplay: this.props.bannerDisplay
+      bannerDisplay: this.props.bannerDisplay,
     });
   }
 
@@ -37,7 +36,7 @@ class Banner extends React.Component {
     if (this.state.bannerDisplay !== this.props.bannerDisplay)
       this.setState({
         hideGrow: !this.props.bannerDisplay,
-        bannerDisplay: this.props.bannerDisplay
+        bannerDisplay: this.props.bannerDisplay,
       });
   }
 
@@ -68,7 +67,7 @@ class Banner extends React.Component {
             alignItems="center"
           >
             <Grid item>
-              <Typography inline variant="body1" align="left">
+              <Box>
                 <Grid
                   container
                   justify="space-between"
@@ -90,10 +89,10 @@ class Banner extends React.Component {
                     <span className={classes.notification}>{notification}</span>
                   </Grid>
                 </Grid>
-              </Typography>
+              </Box>
             </Grid>
             <Grid item>
-              <Typography inline variant="body1" align="right">
+              <Box align="right">
                 <Tooltip
                   title="Close Notification"
                   aria-label="close notification"
@@ -102,7 +101,7 @@ class Banner extends React.Component {
                     <FiX className={classes.icon} />
                   </IconButton>
                 </Tooltip>
-              </Typography>
+              </Box>
             </Grid>
           </Grid>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOMServer from "react-dom/server";
 
 import * as ROUTES from "../../Constants/routes.js";
 import REDIRECTS from "../../Constants/autoredirects.json";
@@ -9,6 +10,7 @@ import AboutUs from "../AboutUs";
 import PoTD from "../PoTD";
 
 import Lectures from "../Lectures";
+import LectureDisplay from "../LectureDisplay";
 
 import OurTeam from "../OurTeam";
 import ContactUs from "../ContactUs";
@@ -62,7 +64,7 @@ class App extends React.Component {
         if (!notification) {
           await db.banner.add({
             id: "notification",
-            value: this.state.notification,
+            value: ReactDOMServer.renderToString(this.state.notification),
           });
           await db.banner.add({
             id: "showBanner",
@@ -71,7 +73,10 @@ class App extends React.Component {
           return;
         }
 
-        if (notification.value === this.state.notification) {
+        if (
+          notification.value ===
+          ReactDOMServer.renderToString(this.state.notification)
+        ) {
           this.setState({ showBanner: showBanner.value === "1" });
         }
       })
@@ -90,7 +95,10 @@ class App extends React.Component {
     event.preventDefault();
 
     const db = this.db;
-    await db.banner.put({ id: "notification", value: this.state.notification });
+    await db.banner.put({
+      id: "notification",
+      value: ReactDOMServer.renderToString(this.state.notification),
+    });
     await db.banner.put({ id: "showBanner", value: "0" });
   }
 
@@ -132,9 +140,13 @@ class App extends React.Component {
                 <OurTeam />
               </Route>
 
-							<Route exact path={ROUTES.LECTURES}>
-								<Lectures />
-							</Route>
+              <Route exact path={ROUTES.LECTURES}>
+                <Lectures />
+              </Route>
+
+              <Route exact path={ROUTES.LECTURE}>
+                <LectureDisplay />
+              </Route>
 
               {Object.keys(REDIRECTS).map((key) => (
                 <Route

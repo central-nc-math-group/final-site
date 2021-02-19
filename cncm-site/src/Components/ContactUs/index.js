@@ -16,19 +16,19 @@ class ContactUs extends React.Component {
       name: {
         value: "",
         valid: true,
-        helper: -1
+        helper: -1,
       },
       email: {
         value: "",
         valid: true,
-        helper: -1
+        helper: -1,
       },
       message: {
         value: "",
         valid: true,
-        helper: -1
+        helper: -1,
       },
-      sent: false
+      sent: false,
     };
 
     this.setValue = this.setValue.bind(this);
@@ -40,17 +40,17 @@ class ContactUs extends React.Component {
       email: [
         "You need to give us an email to contact you at.",
         "This does not match the standard format. Make sure that you enter a valid email.",
-        "Emails should be at most 60 characters."
+        "Emails should be at most 60 characters.",
       ],
       name: [
         "You need to give us an name to address your concerns.",
         "Please try to stick to alphabetical characters (no accents), spaces, and hyphens only!",
-        "Names should be at most 40 characters."
+        "Names should be at most 40 characters.",
       ],
       message: [
         "Your message must have some content.",
-        "Your message can not exceed 2000 characters."
-      ]
+        "Your message can not exceed 2000 characters.",
+      ],
     };
     this.checks = {
       email: [
@@ -59,14 +59,14 @@ class ContactUs extends React.Component {
           !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
             value
           ),
-        (value) => value.length > 60
+        (value) => value.length > 60,
       ],
       name: [
         (value) => value.length === 0,
         (value) => !/^[A-za-z\-\s]*$/.test(value),
-        (value) => value.length > 40
+        (value) => value.length > 40,
       ],
-      message: [(value) => value.length === 0, (value) => value.length > 2000]
+      message: [(value) => value.length === 0, (value) => value.length > 2000],
     };
   }
 
@@ -87,8 +87,8 @@ class ContactUs extends React.Component {
       [event.target.name]: {
         ...this.state[event.target.name],
         value: event.target.value,
-        valid
-      }
+        valid,
+      },
     });
   }
 
@@ -111,21 +111,25 @@ class ContactUs extends React.Component {
         validation = this.validateInput(email.value, "email");
         if (validation > -1)
           this.setState({
-            email: { ...this.state.email, valid: false, helper: validation }
+            email: { ...this.state.email, valid: false, helper: validation },
           });
         break;
       case "name":
         validation = this.validateInput(name.value, "name");
         if (validation > -1)
           this.setState({
-            name: { ...this.state.name, valid: false, helper: validation }
+            name: { ...this.state.name, valid: false, helper: validation },
           });
         break;
       case "message":
         validation = this.validateInput(message.value, "message");
         if (validation > -1)
           this.setState({
-            message: { ...this.state.message, valid: false, helper: validation }
+            message: {
+              ...this.state.message,
+              valid: false,
+              helper: validation,
+            },
           });
         break;
       default:
@@ -201,62 +205,83 @@ class ContactUs extends React.Component {
     let disabled = this.checkAll();
 
     return (
-			<div>
-			<FancyHeader heading="Contact Us" children="Contact us using the form below." />
-					<form className={classes.root} autocomplete="off">
-						<TextField
-						className={classes.textField}
-						name="name"
-						label="Name"
-						variant="outlined"
-						value={name.value}
-						onChange={this.setValue}
-						error={nameError}
-						helperText={nameError && nameHelper}
-						onBlur={this.checkEvent}
-					/>
-					<TextField
-						className={classes.textField}
-						name="email"
-						label="Email"
-						variant="outlined"
-						value={email.value}
-						onChange={this.setValue}
-						error={emailError}
-						helperText={emailError && emailHelper}
-						onBlur={this.checkEvent}
-					/>
-					<TextField
-						className={classes.textArea}
-						name="message"
-						label="Message"
-						variant="outlined"
-						multiline={true}
-						value={message.value}
-						onChange={this.setValue}
-						error={messageError}
-						helperText={messageError && messageHelper}
-						onBlur={this.checkEvent}
-					/>
-					<br />
-					{sent ? (
-						<Button variant="contained" color="secondary" endIcon={<FiCheck />}>
-							Sent
-						</Button>
-					) : (
-						<Button
-							variant="contained"
-							color="primary"
-							endIcon={<FiSend />}
-							disabled={disabled}
-							onClick={this.onSubmit}
-						>
-							Send
-						</Button>
-					)}
-				</form>
-			</div>
-	
+      <div>
+        <FancyHeader
+          heading="Contact Us"
+          children="Contact us using the form below."
+        />
+        <form className={classes.root} autocomplete="off">
+          <TextField
+            inputProps={{
+              style: {
+                padding: "16.5px 14px",
+                paddingRight: "0px",
+              },
+            }}
+            className={classes.textField}
+            name="name"
+            label="Name"
+            variant="outlined"
+            value={name.value}
+            onChange={this.setValue}
+            error={nameError}
+            helperText={nameError && nameHelper}
+            onBlur={this.checkEvent}
+          />
+          <TextField
+            inputProps={{
+              style: {
+                padding: "16.5px 14px",
+                paddingRight: "0px",
+              },
+            }}
+            className={classes.textField}
+            name="email"
+            label="Email"
+            variant="outlined"
+            value={email.value}
+            onChange={this.setValue}
+            error={emailError}
+            helperText={emailError && emailHelper}
+            onBlur={this.checkEvent}
+          />
+          <TextField
+            inputProps={{
+              style: {
+                padding: "16.5px 14px",
+                paddingRight: "0px",
+                width: `calc(80% + 16px)`,
+              },
+            }}
+            className={classes.textArea}
+            name="message"
+            label="Message"
+            variant="outlined"
+            multiline={true}
+            value={message.value}
+            onChange={this.setValue}
+            error={messageError}
+            helperText={messageError && messageHelper}
+            onBlur={this.checkEvent}
+          />
+          <br />
+          {sent ? (
+            <Button variant="contained" color="secondary" endIcon={<FiCheck />}>
+              Sent
+            </Button>
+          ) : (
+            <Button
+              variant="contained"
+              color="primary"
+              endIcon={<FiSend />}
+              disabled={disabled}
+              onClick={this.onSubmit}
+            >
+              Send
+            </Button>
+          )}
+        </form>
+      </div>
     );
   }
 }

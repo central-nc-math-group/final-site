@@ -85,19 +85,25 @@ class NavBar extends React.Component {
                 className={classes.btn}
                 component={RouterLink}
                 to={ROUTES.HOME}
+                variant="secondary"
               >
-									Home
+                Home
               </Button>
 
               <Button
                 className={classes.btn}
                 component={RouterLink}
                 to={ROUTES.CONTACT_US}
+                variant="secondary"
               >
                 Contact Us!
               </Button>
 
-              <Button className={classes.btn} onClick={this.openAccountMenu}>
+              <Button
+                className={classes.btn}
+                onClick={this.openAccountMenu}
+                variant="secondary"
+              >
                 Join Us!
               </Button>
               <Menu
@@ -120,6 +126,7 @@ class NavBar extends React.Component {
               >
                 {Object.keys(REDIRECTS).map((link) => (
                   <MenuItem
+                    key={`${REDIRECTS[link].name}-redirect`}
                     onClick={() =>
                       (window.location.href = REDIRECTS[link].link)
                     }
@@ -137,6 +144,7 @@ class NavBar extends React.Component {
                 className={classes.btn}
                 component={RouterLink}
                 to={ROUTES.OUR_TEAM}
+                variant="secondary"
               >
                 Our Team
               </Button>
@@ -145,6 +153,7 @@ class NavBar extends React.Component {
                 className={classes.btn}
                 component={RouterLink}
                 to={ROUTES.PROBLEM_OF_THE_DAY}
+                variant="secondary"
               >
                 Problem of the Day
               </Button>
@@ -153,12 +162,13 @@ class NavBar extends React.Component {
                 className={classes.btn}
                 component={RouterLink}
                 to={ROUTES.LECTURES}
+                variant="secondary"
               >
                 Lectures
               </Button>
             </div>
           </Toolbar>
-						</AppBar>
+        </AppBar>
       </div>
     );
   }
