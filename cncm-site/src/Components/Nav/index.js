@@ -95,16 +95,9 @@ class NavBar extends React.Component {
                 Home
               </Button>
 
-              <Button
-                className={classes.btn}
-                component={RouterLink}
-                to={ROUTES.CONTACT_US}
-              >
-                Contact Us!
-              </Button>
 
               <Button className={classes.btn} onClick={this.openAccountMenu}>
-                Join Us!
+                Join Us
               </Button>
               <Menu
                 id="customized-menu"
@@ -162,6 +155,15 @@ class NavBar extends React.Component {
                 to={ROUTES.LECTURES}
               >
                 Lectures
+              </Button>
+
+
+              <Button
+                className={classes.btn}
+                component={RouterLink}
+                to={ROUTES.CONTACT_US}
+              >
+                Contact Us
               </Button>
             </div>
           </Toolbar>
