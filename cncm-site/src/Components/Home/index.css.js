@@ -28,7 +28,10 @@ export default function styles(theme) {
     joinUsCard: {
       textAlign: "center",
       color: "white",
-      cursor: "pointer"
+      cursor: "pointer",
+    },
+    joinUsBorder: {
+      maxWidth: "300px!important",
     },
   };
 }

@@ -63,7 +63,7 @@ class App extends React.Component {
         <>
           Signup for CNCM Online R4! Contest takes place 2:00 - 3:00 PM EST
           12/26! More info{" "}
-          <Link color="warning" href="https://online.cncmath.org">
+          <Link color="warning" href="https://cncmath.org/cncm-online">
             here
           </Link>
           .

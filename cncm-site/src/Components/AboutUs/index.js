@@ -19,7 +19,7 @@ class AboutUs extends React.Component {
             At CNCM, we aim to spread a love of mathematics to our community,
             whether through our online competitions, in-person events, our{" "}
             <a href={ROUTES.PROBLEM_OF_THE_DAY}>PoTD</a> (Problem of the Day)
-            mini contest, or the extensive discord server that we have. At CNCM,
+            mini contest, or the extensive Discord server that we have. At CNCM,
             we've built a community around math and math contests, and we'd love
             for you to join!
           </p>

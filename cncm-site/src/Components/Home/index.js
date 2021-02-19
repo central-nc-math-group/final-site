@@ -54,7 +54,7 @@ class Home extends React.Component {
     return (
       <div className={classes.app}>
         <FancyHeader heading="Welcome to CNCM!">
-					Cyclic National Competitive Math Group
+          Cyclic National Competitive Math Group
         </FancyHeader>
         <div className={classes.body}>
           <Paper elevation={10} style={{ padding: "2em" }}>
@@ -68,11 +68,12 @@ class Home extends React.Component {
             <Paper style={{ padding: "1rem" }} elevation={4}>
               <TabBar />
             </Paper>
-						<p>
-							If you would like to check out our discord or youtube, then click the tiles below!
+            <p>
+              If you would like to check out our Discord or YouTube, then click
+              the tiles below!
             </p>
             <Grid container spacing={3}>
-              <Grid item xs>
+              <Grid item xs className={classes.joinUsBorder}>
                 <Card
                   style={{ backgroundColor: "#7289da" }}
                   className={classes.joinUsCard}
@@ -86,7 +87,7 @@ class Home extends React.Component {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs>
+              <Grid item xs className={classes.joinUsBorder}>
                 <Card
                   style={{ backgroundColor: "#FF0000" }}
                   className={classes.joinUsCard}

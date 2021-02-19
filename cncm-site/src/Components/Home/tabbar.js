@@ -45,8 +45,8 @@ function a11yProps(index) {
   };
 }
 
-const tabHeight = '36px';
-const panelHeight = '200px';
+const tabHeight = "36px";
+const panelHeight = "200px";
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   tabRoot: {
     minHeight: tabHeight,
     height: tabHeight,
-  }
+  },
 }));
 
 export default function FullWidthTabs() {
@@ -126,7 +126,7 @@ export default function FullWidthTabs() {
           CNCM runs several online and in-person contests. Our online contests
           are geared towards preparing students for esteemed competitions such
           as the AMC and AIME. You can find more information about them{" "}
-          <Link href="https://online.cncmath.org">here</Link>. We also run
+          <Link href="https://cncmath.org/cncm-online">here</Link>. We also run
           in-person competitions in central NC, such as Math Bowl and CRMT. You
           can find more information about those on the Contests page (not here).
         </TabPanel>

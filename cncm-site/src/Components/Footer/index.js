@@ -83,7 +83,7 @@ class AppFooter extends React.Component {
                     <Link
                       color="inherit"
                       variant="body2"
-                      href="https://www.online.cncmath.org"
+                      href="https://www.cncmath.org/cncm-online"
                     >
                       CNCM Online
                     </Link>
@@ -128,15 +128,17 @@ class AppFooter extends React.Component {
                 </ul>
               </Grid>
             </Grid>
+            <br />
+            <br />
             <Typography
               className={classes.version}
               color="textSecondary"
               variant="body2"
             >
-              Copyright © {new Date().getFullYear()} Cyclic National Competitive Math Group. All rights reserved. Cyclic
-              National Competitive Math Group is a non-profit, tax exempt public
-              charity as described in section 501(c)(3) of the U.S. Internal
-              Revenue Code.
+              Copyright © {new Date().getFullYear()} Cyclic National Competitive
+              Math Group. All rights reserved. Cyclic National Competitive Math
+              Group is a non-profit, tax exempt public charity as described in
+              section 501(c)(3) of the U.S. Internal Revenue Code.
             </Typography>
           </footer>
         </Container>
