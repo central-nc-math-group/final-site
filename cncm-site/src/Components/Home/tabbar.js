@@ -128,7 +128,7 @@ export default function FullWidthTabs() {
           as the AMC and AIME. You can find more information about them{" "}
           <Link href="https://cncmath.org/cncm-online">here</Link>. We also run
           in-person competitions in central NC, such as Math Bowl and CRMT. You
-          can find more information about those on the Contests page (not here).
+          can find more information about those on the Contests page (coming soon).
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           CNCM offers several resources to help students prepare for

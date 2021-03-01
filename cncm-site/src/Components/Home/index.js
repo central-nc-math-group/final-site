@@ -59,11 +59,8 @@ class Home extends React.Component {
         <div className={classes.body}>
           <Paper elevation={10} style={{ padding: "2em" }}>
             <p style={{ marginTop: 0 }}>
-              The Cyclic National Competitive Math Group (CNCM) is a non-profit,
-              501(c)3 tax-exempt organization dedicated to enriching both the
-              academic and competitive math knowledge of middle school, high
-              school, and college students through online lectures, original
-              math problems, and a multitude of contests.
+            At CNCM, our mission is to enrich both the academic and competitive math knowledge of students around the globe.
+
             </p>
             <Paper style={{ padding: "1rem" }} elevation={4}>
               <TabBar />

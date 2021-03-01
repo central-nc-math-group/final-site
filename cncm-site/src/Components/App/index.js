@@ -31,11 +31,11 @@ import { responsiveFontSizes } from "@material-ui/core/styles";
 let theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#e8705c",
+      main: "#0c54c7",
     },
     secondary: {
-      main: "#e03a68",
-      light: "#d86c87",
+      main: "#0c54c7",
+      light: "#1d66db",
     },
     error: {
       main: "#f3ad5a",

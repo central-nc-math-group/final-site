@@ -20,17 +20,12 @@ class OurTeam extends React.Component {
       <div>
         <FancyHeader heading="Our Team">
           {" "}
-          The CNCM administration consists of both executive Board members and
-          Advisors.
+ 
         </FancyHeader>
         <div className={classes.body}>
           <Paper elevation={10} style={{ padding: "2em" }}>
             <p style={{ marginTop: 0 }}>
-              The Cyclic National Competitive Math Group (CNCM) is a non-profit,
-              501(c)3 tax-exempt organization dedicated to enriching both the
-              academic and competitive math knowledge of middle school, high
-              school, and college students through online lectures, original
-              math problems, and a multitude of contests.
+    
             </p>
             <Paper style={{ padding: "1rem" }} elevation={4}>
               <TabBar />
