@@ -11,3 +11,7 @@
 .MuiTabs-root {
   min-height: 48px !important;
 }
+
+.rpv-default-layout-main {
+  height: 100%;
+}
