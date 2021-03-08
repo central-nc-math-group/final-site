@@ -9,6 +9,8 @@ import Home from "../Home";
 import AboutUs from "../AboutUs";
 import PoTD from "../PoTD";
 
+import Online from "../Online";
+
 import Lectures from "../Lectures";
 import LectureDisplay from "../LectureDisplay";
 
@@ -22,6 +24,10 @@ import Footer from "../Footer";
 import { Link } from "@material-ui/core";
 
 import Dexie from "dexie";
+
+import { SnackbarProvider } from "notistack";
+
+import { AuthUserContext, withAuthentication } from "../Session";
 
 import "./index.css";
 
@@ -136,63 +142,77 @@ class App extends React.Component {
 
     return (
       <div id="site">
-        <ThemeProvider theme={theme}>
-          <Router>
-            <Nav />
-            {!loading ? (
-              <Banner
-                hideBanner={this.hideBanner}
-                bannerDisplay={showBanner}
-                notification={notification}
-              />
-            ) : (
-              <></>
-            )}
-            <div id="site-content">
-              <Switch>
-                <Route exact path={ROUTES.HOME}>
-                  <Home />
-                </Route>
+        <Router>
+          <Nav />
+          {!loading ? (
+            <Banner
+              hideBanner={this.hideBanner}
+              bannerDisplay={showBanner}
+              notification={notification}
+            />
+          ) : (
+            <></>
+          )}
+          <div id="site-content">
+            <Switch>
+              <Route exact path={ROUTES.HOME}>
+                <Home />
+              </Route>
 
-                <Route exact path={ROUTES.ABOUT_US}>
-                  <AboutUs />
-                </Route>
+              <Route exact path={ROUTES.ABOUT_US}>
+                <AboutUs />
+              </Route>
 
-                <Route exact path={ROUTES.CONTACT_US}>
-                  <ContactUs />
-                </Route>
+              <Route exact path={ROUTES.CONTACT_US}>
+                <ContactUs />
+              </Route>
 
-                <Route exact path={ROUTES.PROBLEM_OF_THE_DAY}>
-                  <PoTD />
-                </Route>
+              <Route exact path={ROUTES.PROBLEM_OF_THE_DAY}>
+                <PoTD />
+              </Route>
 
-                <Route exact path={ROUTES.OUR_TEAM}>
-                  <OurTeam />
-                </Route>
+              <Route exact path={ROUTES.OUR_TEAM}>
+                <OurTeam />
+              </Route>
 
-                <Route exact path={ROUTES.LECTURES}>
-                  <Lectures />
-                </Route>
+              <Route exact path={ROUTES.LECTURES}>
+                <Lectures />
+              </Route>
 
-                <Route exact path={ROUTES.LECTURE}>
-                  <LectureDisplay />
-                </Route>
+              <Route exact path={ROUTES.LECTURE}>
+                <LectureDisplay />
+              </Route>
 
-                {Object.keys(REDIRECTS).map((key) => (
-                  <Route
-                    path={REDIRECTS[key].redirect}
-                    key={`redirect-${REDIRECTS[key].name}`}
-                    component={() => <Redirect link={REDIRECTS[key].link} />}
-                  />
-                ))}
-              </Switch>
-            </div>
-            <Footer />
-          </Router>
-        </ThemeProvider>
+              <Route exact path={ROUTES.ONLINE}>
+                <Online />
+              </Route>
+
+              {Object.keys(REDIRECTS).map((key) => (
+                <Route
+                  path={REDIRECTS[key].redirect}
+                  key={`redirect-${REDIRECTS[key].name}`}
+                  component={() => <Redirect link={REDIRECTS[key].link} />}
+                />
+              ))}
+            </Switch>
+          </div>
+          <Footer />
+        </Router>
       </div>
     );
   }
 }
 
-export default App;
+const AppInner = withAuthentication(App);
+
+export default class FullApp extends React.Component {
+  render() {
+    return (
+      <ThemeProvider theme={theme}>
+        <SnackbarProvider maxSnack={3}>
+          <AppInner />
+        </SnackbarProvider>
+      </ThemeProvider>
+    );
+  }
+}

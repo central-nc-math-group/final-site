@@ -12,3 +12,11 @@ export const PROBLEM_OF_THE_DAY = "/problem-of-the-day";
 export const ABOUT_US = "/about-us";
 export const CONTACT_US = "/contact-us";
 export const OUR_TEAM = "/our-team";
+
+export const ONLINE = "/online/*";
+export const SIGNIN = "/online/sign-in";
+export const ACCOUNT = "/online/account";
+export const FORGOT_PASSWORD = "/online/forgot-password";
+export const SIGNUP = "/online/signup";
+export const ONLINE_RULES = "/online/rules";
+export const SPONSORS = "/online/sponsors";

@@ -3,8 +3,6 @@ import React from "react";
 import styles from "./index.css.js";
 import { withStyles, Paper, Typography, Link } from "@material-ui/core";
 
-import { storage } from "../Firebase";
-
 import ReactPlayer from "react-player";
 
 import FancyHeader from "../FancyHeader";
@@ -297,8 +295,7 @@ class LectureDisplay extends React.Component {
               padding: "30px",
             }}
           >
-            {this.state.link &&
-              this.state.lecture.handout &&
+            {this.state.lecture.handout &&
               this.state.lecture.handout !== "None" && (
                 <div
                   style={{
@@ -308,7 +305,7 @@ class LectureDisplay extends React.Component {
                     margin: "auto",
                   }}
                 >
-                  <PdfViewer file={this.state.link} />
+                  <PdfViewer file={this.state.lecture.handout} />
                 </div>
               )}
             <br />
