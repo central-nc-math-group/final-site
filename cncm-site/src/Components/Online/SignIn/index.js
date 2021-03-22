@@ -21,6 +21,7 @@ import { compose } from "recompose";
 
 import { withSnackbar } from "notistack";
 
+import {auth} from "../../Firebase";
 import * as ROUTES from "../../../Constants/routes";
 
 import styles from "./index.css.js";
@@ -180,6 +181,10 @@ class Login extends React.Component {
   render() {
     const { classes } = this.props;
     const { email, password, loggingIn } = this.state;
+
+	console.log(auth.currentUser.displayName);
+		console.log(auth.currentUser.email);
+		console.log(auth.currentUser.displayName);
 
     let emailError = !email.valid,
       passwordError = !password.valid;

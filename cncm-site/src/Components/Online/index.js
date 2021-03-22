@@ -4,6 +4,8 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import Rules from "./Rules";
 import Sponsors from "./Sponsors";
+import OnlineHome from "./OnlineHome";
+import Account from "./Account";
 
 import { Route, withRouter, Switch } from "react-router-dom";
 
@@ -27,8 +29,16 @@ class Online extends React.Component {
 
           <Route exact path={ROUTES.SPONSORS}>
             <Sponsors />
-          </Route>
+					</Route>
+
+          <Route exact path={ROUTES.ONLINE_HOME}>
+						<OnlineHome />
+					</Route>
         </Switch>
+
+				<Route exact path={ROUTES.ACCOUNT}>
+					<Account />
+				</Route>
       </div>
     );
   }

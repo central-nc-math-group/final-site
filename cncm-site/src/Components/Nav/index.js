@@ -15,10 +15,7 @@ import {
 
 import { RiTwitchLine, RiDiscordLine, RiYoutubeLine } from "react-icons/ri";
 
-import HomeLogo from "../../Constants/images/cncm-logo.png";
-
-import NewHomeLogo from "../../Constants/images/new-icon.svg";
-
+import NewHomeLogo from "../../Constants/images/cncm-logo.png";
 import { Link as RouterLink, withRouter } from "react-router-dom";
 
 import { compose } from "recompose";
@@ -76,7 +73,7 @@ class NavBar extends React.Component {
         <AppBar position="static" className={classes.bar} height={5 / 2}>
           <Toolbar>
             <IconButton edge="start" color="inherit" aria-label="menu">
-              <img src={NewHomeLogo} width={65} height={65} />
+              <img src={NewHomeLogo} width={45} height={50} />
             </IconButton>
 
             <Typography
@@ -165,6 +162,11 @@ class NavBar extends React.Component {
               >
                 Contact Us
               </Button>
+
+							<a href="https://cncm-website.web.app/cncm-online/index.html">
+								<Button className={classes.btn}>CNCM Online</Button>
+							</a>
+
             </div>
           </Toolbar>
         </AppBar>

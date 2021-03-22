@@ -67,9 +67,9 @@ class App extends React.Component {
       showBanner: true,
       notification: (
         <>
-          Signup for CNCM Online R4! Contest takes place 2:00 - 3:00 PM EST
-          12/26! More info{" "}
-          <Link color="warning" href="https://cncmath.org/cncm-online">
+					Signup for CNCM Online: Spring 2021! Contest takes place 2:00 - 3:00 PM EST
+          4/3! More info{" "}
+					<Link color="#E11584" href="https://cncm-website.web.app/cncm-online/index.html">
             here
           </Link>
           .

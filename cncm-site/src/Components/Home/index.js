@@ -3,6 +3,8 @@ import React from "react";
 import logo from "./../../logo.svg";
 import styles from "./index.css.js";
 
+import auth from "firebase";
+
 import {
   Typography,
   withStyles,
@@ -47,10 +49,16 @@ class Home extends React.Component {
     window.location.href = location;
   }
 
+	isUser() {
+		if (auth.currentUser) return <p>Hello user!</p>
+		else return <p>there is no one signed in.</p>
+	}
+
   render() {
     const { classes } = this.props;
     const { expanded } = this.state;
 
+		console.log(auth.currentUser);
     return (
       <div className={classes.app}>
         <FancyHeader heading="Welcome to CNCM!">
@@ -60,8 +68,8 @@ class Home extends React.Component {
           <Paper elevation={10} style={{ padding: "2em" }}>
             <p style={{ marginTop: 0 }}>
             At CNCM, our mission is to enrich both the academic and competitive math knowledge of students around the globe.
-
             </p>
+						<isUser />
             <Paper style={{ padding: "1rem" }} elevation={4}>
               <TabBar />
             </Paper>
@@ -79,9 +87,9 @@ class Home extends React.Component {
                   <CardMedia>
                     <RiDiscordFill size="50%" color="#FFFFFF" />
                   </CardMedia>
-                  <CardContent>
-                    <Typography variant="h3">DISCORD</Typography>
-                  </CardContent>
+                  {/* <CardContent> */}
+                  {/*   <Typography variant="h3">DISCORD</Typography> */}
+                  {/* </CardContent> */}
                 </Card>
               </Grid>
               <Grid item xs className={classes.joinUsBorder}>
@@ -93,9 +101,9 @@ class Home extends React.Component {
                   <CardMedia>
                     <RiYoutubeFill size="50%" color="#FFFFFF" />
                   </CardMedia>
-                  <CardContent>
-                    <Typography variant="h3">YOUTUBE</Typography>
-                  </CardContent>
+                  {/* <CardContent> */}
+                  {/*   <Typography variant="h3">YOUTUBE</Typography> */}
+                  {/* </CardContent> */}
                 </Card>
               </Grid>
             </Grid>

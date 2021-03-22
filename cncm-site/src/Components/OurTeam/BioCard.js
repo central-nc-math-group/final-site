@@ -11,20 +11,23 @@ import styles from "./BioCard.css.js";
 
 class BioCard extends React.Component {
   render() {
-    const { img, name, description, classes } = this.props;
+    const { name, description, text } = this.props;
 
     return (
       <div>
         <Card style={{ maxWidth: 345, margin: "20px" }}>
           <CardActionArea style={{ display: "block" }}>
-            <CardMedia style={{ height: 80 }} image={img} title="Face" />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
+							<Typography style={{ textAlign: 'center' }} gutterBottom variant="h5" component="h2">
                 {name}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+							<Typography style={{ textAlign: 'center' }} variant="body1" color="textSecondary" component="h5">
                 {description}
               </Typography>
+
+							{/* <Typography gutterBottom variant="h6" component="p"> */}
+							{/* 	{text} */}	
+							{/* </Typography> */}
             </CardContent>
           </CardActionArea>
         </Card>

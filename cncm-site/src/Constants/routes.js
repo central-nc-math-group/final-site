@@ -20,3 +20,4 @@ export const FORGOT_PASSWORD = "/online/forgot-password";
 export const SIGNUP = "/online/signup";
 export const ONLINE_RULES = "/online/rules";
 export const SPONSORS = "/online/sponsors";
+export const ONLINE_HOME = "/online/home";

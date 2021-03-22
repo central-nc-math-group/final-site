@@ -8,6 +8,8 @@ export { FirebaseContext, withFirebase };
 const firebaseConfig = {
   apiKey: "AIzaSyAdGSh3AX1ZIlSLsIWowO4lNIa9CJMCQ08",
   authDomain: "cncm-website.firebaseapp.com",
+	storageBucket: "cncm-website.appspot.com",
+	databaseURL: "https://cncm-website.firebaseio.com/",
   projectId: "cncm-website",
   messagingSenderId: "405298212702",
   appId: "1:405298212702:web:12f84c73f1c9f895",
@@ -17,6 +19,8 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export const auth = firebase.auth();
+
+export const db = firebase.database(); // i am lazy 
 
 export const resendEmailVerification = async (authUser) => {
   //
