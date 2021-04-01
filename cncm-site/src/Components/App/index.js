@@ -67,9 +67,12 @@ class App extends React.Component {
       showBanner: true,
       notification: (
         <>
-					Signup for CNCM Online: Spring 2021! Contest takes place 2:00 - 3:00 PM EST
-          4/3! More info{" "}
-					<Link color="#E11584" href="https://cncm-website.web.app/cncm-online/index.html">
+          Signup for CNCM Online: Spring 2021! Contest takes place 2:00 - 3:00
+          PM EST 4/3! More info{" "}
+          <Link
+            color="#E11584"
+            href="https://cncm-website.web.app/cncm-online/index.html"
+          >
             here
           </Link>
           .
@@ -186,6 +189,15 @@ class App extends React.Component {
               <Route exact path={ROUTES.ONLINE}>
                 <Online />
               </Route>
+
+              <Route
+                path="/april-fools-contest"
+                component={() => {
+                  window.location.href =
+                    "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+                  return null;
+                }}
+              />
 
               {Object.keys(REDIRECTS).map((key) => (
                 <Route
