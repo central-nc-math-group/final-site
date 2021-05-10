@@ -66,14 +66,14 @@ class Home extends React.Component {
         </FancyHeader>
         <div className={classes.body}>
           <Paper elevation={10} style={{ padding: "2em" }}>
-            <p style={{ marginTop: 0 }}>
+            <p style={{ marginTop: 0, textAlign: 'center'}}>
             At CNCM, our mission is to enrich both the academic and competitive math knowledge of students around the globe.
             </p>
 						<isUser />
             <Paper style={{ padding: "1rem" }} elevation={4}>
               <TabBar />
             </Paper>
-            <p>
+            <p style={{textAlign: 'center'}}>
               If you would like to check out our Discord or YouTube, then click
               the tiles below!
             </p>

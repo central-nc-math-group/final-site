@@ -21,6 +21,8 @@ import Banner from "../Banner";
 import Redirect from "../Redirect";
 import Footer from "../Footer";
 
+import Sponsors from "../Sponsors";
+
 import { Link } from "@material-ui/core";
 
 import Dexie from "dexie";
@@ -64,18 +66,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showBanner: true,
+      showBanner: false,
       notification: (
         <>
-          Signup for CNCM Online: Spring 2021! Contest takes place 2:00 - 3:00
-          PM EST 4/3! More info{" "}
-          <Link
-            color="#E11584"
-            href="https://cncm-website.web.app/cncm-online/index.html"
-          >
-            here
-          </Link>
-          .
+          More news about CNCM Online coming soon. 
         </>
       ),
       existsNotification: true,
@@ -189,6 +183,11 @@ class App extends React.Component {
               <Route exact path={ROUTES.ONLINE}>
                 <Online />
               </Route>
+
+              <Route exact path={ROUTES.SPONSORS}>
+                <Sponsors />
+              </Route>
+
 
               <Route
                 path="/april-fools-contest"
