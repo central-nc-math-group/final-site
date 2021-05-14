@@ -23,6 +23,8 @@ import Footer from "../Footer";
 
 import Sponsors from "../Sponsors";
 
+import Archive from "../Archive";
+
 import { Link } from "@material-ui/core";
 
 import Dexie from "dexie";
@@ -197,6 +199,10 @@ class App extends React.Component {
                   return null;
                 }}
               />
+
+              <Route exact path={ROUTES.ARCHIVE}>
+                <Archive />
+              </Route>
 
               {Object.keys(REDIRECTS).map((key) => (
                 <Route

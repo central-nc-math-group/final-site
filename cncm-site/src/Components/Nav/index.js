@@ -171,6 +171,14 @@ class NavBar extends React.Component {
                   Sponsors
                 </Button>
 
+              <Button 
+                className={classes.btn}
+                component={RouterLink}
+                to={ROUTES.ARCHIVE}
+                >
+                  Archive
+                </Button>
+
 							<a href="https://cncm-website.web.app/cncm-online/index.html">
 								<Button className={classes.btn}>CNCM Online</Button>
 							</a>

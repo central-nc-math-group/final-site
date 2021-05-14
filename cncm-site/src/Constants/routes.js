@@ -23,3 +23,4 @@ export const ONLINE_RULES = "/online/rules";
 export const ONLINE_HOME = "/online/home";
 
 export const SPONSORS = "/sponsors";
+export const ARCHIVE = "/archive";
