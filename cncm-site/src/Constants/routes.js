@@ -24,3 +24,4 @@ export const ONLINE_HOME = "/online/home";
 
 export const SPONSORS = "/sponsors";
 export const ARCHIVE = "/archive";
+export const UNC_MATH_CONTEST = "/unc-math-contest"

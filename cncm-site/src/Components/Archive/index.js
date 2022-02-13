@@ -23,7 +23,7 @@ function Archive(props) {
                     <li><a href="https://cncm-website.web.app/pdfs/Math_Bowl_Team_Round.pdf">Team Round</a></li>
                     <li><a href="https://cncm-website.web.app/pdfs/Math_Bowl_R1.pdf">Preliminary Round 1</a></li>
                     <li><a href="https://cncm-website.web.app/pdfs/Math_Bowl_R2.pdf">Preliminary Round 2</a></li>
-                    <li>Due to unfixable errors, Preliminary Round 3 is not posted.</li>
+                    <li>Preliminary Round 3</li>
                     <li><a href="https://cncm-website.web.app/pdfs/Math_Bowl_R4.pdf">Preliminary Round 4</a></li>
                     <li><a href="https://cncm-website.web.app/pdfs/Math_Bowl_R5.pdf">Preliminary Round 5</a></li>
                     <li><a href="https://cncm-website.web.app/pdfs/Math_Bowl_SEMIS1.pdf">Semifinal Round 1</a></li>

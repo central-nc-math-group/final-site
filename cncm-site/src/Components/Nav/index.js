@@ -133,6 +133,14 @@ class NavBar extends React.Component {
               <Button
                 className={classes.btn}
                 component={RouterLink}
+                to={ROUTES.UNC_MATH_CONTEST}
+              >
+                UNC Math Contest
+              </Button>
+
+              <Button
+                className={classes.btn}
+                component={RouterLink}
                 to={ROUTES.OUR_TEAM}
               >
                 Our Team

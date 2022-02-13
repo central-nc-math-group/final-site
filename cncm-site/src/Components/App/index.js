@@ -15,6 +15,7 @@ import Lectures from "../Lectures";
 import LectureDisplay from "../LectureDisplay";
 
 import OurTeam from "../OurTeam";
+import UNC from "../UNC";
 import ContactUs from "../ContactUs";
 import Nav from "../Nav";
 import Banner from "../Banner";
@@ -160,6 +161,10 @@ class App extends React.Component {
 
               <Route exact path={ROUTES.ABOUT_US}>
                 <AboutUs />
+              </Route>
+
+              <Route exact path={ROUTES.UNC_MATH_CONTEST}>
+                <UNC />
               </Route>
 
               <Route exact path={ROUTES.CONTACT_US}>
