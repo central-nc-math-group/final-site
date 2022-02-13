@@ -142,15 +142,15 @@ Hi! I’m Hari, and I love math, physics, and composing music. Recently, I’ve 
             <Grid item xs>
               <BioCard name="Aditya Gupta" description="Board Member" />
             </Grid>
+
+            <Grid item xs>
+              <BioCard
+                  name="Minseok Park" description="Content Creation Captain" />
+            </Grid>
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           <Grid container spacing={20}>
-            
-            <Grid item xs>
-              <BioCard
-                  name="Minseok Park" description="Staff" />
-            </Grid>
 
             <Grid item xs>
               <BioCard name="Kenan Hasanaliyev" description="Staff" />
