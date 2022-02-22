@@ -4,8 +4,8 @@ export default function styles(theme) {
             fontSize: "1.5rem",
             color: theme.palette.text.primary,
             textAlign: "left",
-            marginLeft: "10vw",
-            marginRight: "10vw",
+            marginLeft: "1vw",
+            marginRight: "1vw",
             marginTop: "2.5vh",
           },
     };

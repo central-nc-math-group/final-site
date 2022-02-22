@@ -129,14 +129,14 @@ class NavBar extends React.Component {
                   </MenuItem>
                 ))}
               </Menu>
-{/* 
+
               <Button
                 className={classes.btn}
                 component={RouterLink}
                 to={ROUTES.UNC_MATH_CONTEST}
               >
                 UNC Math Contest
-              </Button> */}
+              </Button>
 
               <Button
                 className={classes.btn}
