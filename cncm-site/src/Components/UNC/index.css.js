@@ -8,5 +8,8 @@ export default function styles(theme) {
             marginRight: "1vw",
             marginTop: "2.5vh",
           },
+          highlight: {
+              color: "red"
+          },
     };
 }
