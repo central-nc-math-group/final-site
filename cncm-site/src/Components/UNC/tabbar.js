@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import RulesPDF from "../../Constants/unc_contest_rules.pdf";
+import AoPS from "../../Constants/images/AoPS_Main_Logo.png";
+import JetBrains from "../../Constants/images/jb_beam.svg";
 import {
   makeStyles,
   useTheme,
@@ -141,6 +143,13 @@ export default function FullWidthTabs() {
               root: classes.tabRoot,
             }}
           />
+          <Tab
+            label="Sponsors"
+            {...a11yProps(5)}
+            classes={{
+              root: classes.tabRoot,
+            }}
+          />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -235,6 +244,13 @@ export default function FullWidthTabs() {
           <div className={classes.body}>
             There is <a href="https://move.unc.edu/parking/visitor-parking/" target="_blank">visitor parking</a> available in Swain Lot right across from Phillips Hall on weekends.  Additional visitor parking is available in the Morehead Planetarium lot, a short walk from Phillips Hall.  <a href="https://move.unc.edu/parking/weeknight-parking/" target="_blank">Most weeknight parking areas</a> are available on Saturdays without a permit and usually without a fee. There are also public <a href="https://www.parkonthehill.com/" target="_blank">parking decks on Rosemary Street</a> a few blocks away. Please allow extra time to find parking.  Carpooling is encouraged!
           </div>
+        </TabPanel>
+        <TabPanel value={value} index={5} dir={theme.direction}>
+          <div>Thank you to our amazing sponsors for supporting the UNC Math Contest!</div>
+
+          <div style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', }}><img src={AoPS} alt="AoPS Logo" width="400px" height="auto"/></div>
+          <div style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', }}><img src={JetBrains} alt="JetBrain Logo" width="200px" height="auto"/></div>
+ 
         </TabPanel>
       </SwipeableViews>
     </div>
