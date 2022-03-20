@@ -229,7 +229,7 @@ export default function FullWidthTabs() {
           <div className={classes.body}>
             Please use the following <a href="https://forms.gle/WMPCR2WVWQFFrzVq7" target="_blank">form</a> to register your team. The registration fee will be <strong>$10 per person</strong>. This fee will cover prizes for top contestants and teams, lunch, and t-shirts. Information on how to pay this fee will be included in the form.
             <br></br><br></br>
-            The registration will close at approximately <strong>11:59 PM EST on March 22nd</strong> OR when <strong>20 teams have signed up</strong>. 
+            The registration will close when <strong>20 teams have signed up</strong>. 
             <br></br><br></br>
             If you aren’t able to find enough members for a team of 4, join our <a href="/discord" target="_blank">Discord server!</a> There are plenty of people based in the NC area in it, and you’ll definitely be able to find other team members in it. 
             
