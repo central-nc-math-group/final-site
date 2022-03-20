@@ -21,7 +21,6 @@ function UNC(props) {
       <div className={classes.body}>
         <h2>We are pleased to announce the UNC Math Contest by CNCM!</h2>
         <p>The UNC Math Contest will accept <strong>teams of up to 4 students</strong>. While this competition is targeted towards high-school students, highly motivated middle school students are welcome to attend. This competition will be <strong>in-person</strong> at <strong>Phillips Hall, UNC Chapel-Hill</strong> on <strong>April 2nd, 2022</strong> from <strong>8:30 am to 3:30 pm ET</strong>. (120 E Cameron Ave, Chapel Hill, NC 27514). </p>
-        <p>If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:cncmathgroup@gmail.com">cncmathgroup@gmail.com</a>.</p>
         <h2>To register, please click <a href="https://forms.gle/WMPCR2WVWQFFrzVq7" target="_blank">here</a>.</h2>  <h2>  Payment link, pay the $10 registration fee <a href="https://paypal.me/scottsheinbaum" target="_blank">here</a>.</h2>
       </div>
       <Paper style={{ padding: "1rem" }} elevation={4}>
