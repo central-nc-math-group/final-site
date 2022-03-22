@@ -4,6 +4,7 @@ import SwipeableViews from "react-swipeable-views";
 import RulesPDF from "../../Constants/unc_contest_rules.pdf";
 import AoPS from "../../Constants/images/AoPS_Main_Logo.png";
 import JetBrains from "../../Constants/images/jb_beam.svg";
+import JaneStreet from "../../Constants/images/jane-street.png";
 import {
   makeStyles,
   useTheme,
@@ -247,7 +248,8 @@ export default function FullWidthTabs() {
         </TabPanel>
         <TabPanel value={value} index={5} dir={theme.direction}>
           <div>Thank you to our amazing sponsors for supporting the UNC Math Contest!</div>
-
+          <br></br>
+          <div style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', }}><img src={JaneStreet} alt="Jane Street Logo" width="800px" height="auto"/></div>
           <div style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', }}><img src={AoPS} alt="AoPS Logo" width="400px" height="auto"/></div>
           <div style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', }}><img src={JetBrains} alt="JetBrain Logo" width="200px" height="auto"/></div>
  
