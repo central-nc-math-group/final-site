@@ -169,40 +169,54 @@ export default function FullWidthTabs() {
                 <TableRow>
                   <TableCell align="center">Time</TableCell>
                   <TableCell align="center">Event</TableCell>
+                  <TableCell align="center">Location</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-              <TableRow>
-                  <TableCell align="center">8:30 - 9:00 AM</TableCell>
+                <TableRow>
+                  <TableCell align="center">8:15 - 8:45 AM</TableCell>
                   <TableCell align="center">Check-In</TableCell>
+                  <TableCell align="center">Phillips Front Entrance</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell align="center">8:45 - 9:00 AM</TableCell>
+                  <TableCell align="center">Opening Ceremony</TableCell>
+                  <TableCell align="center">Room PH-215</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="center">9:10 - 10:10 AM</TableCell>
                   <TableCell align="center">Power Round</TableCell>
+                  <TableCell align="center">Team Rooms</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="center">10:15 - 11:15 AM</TableCell>
                   <TableCell align="center">Blitz Round</TableCell>
+                  <TableCell align="center">Team Rooms</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="center">11:15 - 12:15 PM</TableCell>
                   <TableCell align="center">Lunch (will be provided)</TableCell>
+                  <TableCell align="center">Phillips Front Entrance</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="center">12:30 - 1:30 PM</TableCell>
                   <TableCell align="center">Individual Round</TableCell>
+                  <TableCell align="center">Room PH-215</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="center">1:30 - 2:45 PM</TableCell>
                   <TableCell align="center">UNC Special Activity (will be a surprise!)</TableCell>
+                  <TableCell align="center">Phillips Hall</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="center">2:50 - 3:00 PM</TableCell>
                   <TableCell align="center">Tiebreaker Round</TableCell>
+                  <TableCell align="center">Room PH-215</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="center">3:00 - 3:30 PM</TableCell>
                   <TableCell align="center">Awards Ceremony</TableCell>
+                  <TableCell align="center">Room PH-215</TableCell>
                 </TableRow>
 
               </TableBody>
