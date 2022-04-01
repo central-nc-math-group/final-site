@@ -252,7 +252,13 @@ export default function FullWidthTabs() {
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
           <div className={classes.body}>
-            Prizes will be awarded to top contestants and teams. More specific information will be posted in the coming weeks!
+            Prizes will be awarded as follows: 
+            <br/><br/>
+            The top 3 individuals will receive $75, $50, and $25 Amazon gift cards respectively as well as Jetbrains licenses. The top 4 individuals will also receive WolframAlpha Notebook Edition subscriptions and $25 AoPS gift cards.
+            <br/><br/>
+            The top 3 teams will receive $120, $100, and $80 Amazon gift cards respectively (split among each teammate). The top 5 teams will also receive WolframAlpha Notebook Edition subscriptions.
+            <br/><br/>
+            The top winners of the special activity will receive a special, undisclosed prize.
           </div>
         </TabPanel>
         <TabPanel value={value} index={4} dir={theme.direction}>
